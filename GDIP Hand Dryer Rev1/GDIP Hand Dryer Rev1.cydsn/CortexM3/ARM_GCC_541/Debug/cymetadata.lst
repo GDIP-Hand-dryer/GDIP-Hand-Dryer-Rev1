@@ -1,0 +1,1398 @@
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 864
+  28              	cy_meta_configecc:
+  29 0000 03       		.byte	3
+  30 0001 45       		.byte	69
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 04       		.byte	4
+  34 0005 52       		.byte	82
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 01       		.byte	1
+  38 0009 64       		.byte	100
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 61       		.byte	97
+  42 000d 02       		.byte	2
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 3B       		.byte	59
+  46 0011 03       		.byte	3
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 4F       		.byte	79
+  50 0015 04       		.byte	4
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 38       		.byte	56
+  54 0019 05       		.byte	5
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 02       		.byte	2
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 2
+
+
+  58 001d 07       		.byte	7
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 01       		.byte	1
+  62 0021 0D       		.byte	13
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 01       		.byte	1
+  66 0025 15       		.byte	21
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 01       		.byte	1
+  70 0029 1B       		.byte	27
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 08       		.byte	8
+  74 002d 42       		.byte	66
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 03       		.byte	3
+  78 0031 43       		.byte	67
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 02       		.byte	2
+  82 0035 44       		.byte	68
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 09       		.byte	9
+  86 0039 45       		.byte	69
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 05       		.byte	5
+  90 003d 46       		.byte	70
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 04       		.byte	4
+  94 0041 47       		.byte	71
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 01       		.byte	1
+  98 0045 48       		.byte	72
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 02       		.byte	2
+ 102 0049 49       		.byte	73
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 0B       		.byte	11
+ 106 004d 4C       		.byte	76
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 01       		.byte	1
+ 110 0051 4D       		.byte	77
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 03       		.byte	3
+ 114 0055 50       		.byte	80
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 01       		.byte	1
+ 118 0059 51       		.byte	81
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 0F       		.byte	15
+ 122 005d 02       		.byte	2
+ 123 005e 12       		.byte	18
+ 124 005f 02       		.byte	2
+ 125 0060 7C       		.byte	124
+ 126 0061 02       		.byte	2
+ 127 0062 10       		.byte	16
+ 128 0063 02       		.byte	2
+ 129 0064 11       		.byte	17
+ 130 0065 01       		.byte	1
+ 131 0066 14       		.byte	20
+ 132 0067 03       		.byte	3
+ 133 0068 61       		.byte	97
+ 134 0069 08       		.byte	8
+ 135 006a 82       		.byte	-126
+ 136 006b 0F       		.byte	15
+ 137 006c 01       		.byte	1
+ 138 006d 64       		.byte	100
+ 139 006e 02       		.byte	2
+ 140 006f 9F       		.byte	-97
+ 141 0070 05       		.byte	5
+ 142 0071 24       		.byte	36
+ 143 0072 06       		.byte	6
+ 144 0073 FF       		.byte	-1
+ 145 0074 07       		.byte	7
+ 146 0075 40       		.byte	64
+ 147 0076 09       		.byte	9
+ 148 0077 77       		.byte	119
+ 149 0078 0A       		.byte	10
+ 150 0079 60       		.byte	96
+ 151 007a 0B       		.byte	11
+ 152 007b 80       		.byte	-128
+ 153 007c 0C       		.byte	12
+ 154 007d 7F       		.byte	127
+ 155 007e 0D       		.byte	13
+ 156 007f 24       		.byte	36
+ 157 0080 0E       		.byte	14
+ 158 0081 80       		.byte	-128
+ 159 0082 10       		.byte	16
+ 160 0083 80       		.byte	-128
+ 161 0084 11       		.byte	17
+ 162 0085 10       		.byte	16
+ 163 0086 13       		.byte	19
+ 164 0087 E5       		.byte	-27
+ 165 0088 14       		.byte	20
+ 166 0089 1F       		.byte	31
+ 167 008a 15       		.byte	21
+ 168 008b 93       		.byte	-109
+ 169 008c 16       		.byte	22
+ 170 008d 20       		.byte	32
+ 171 008e 17       		.byte	23
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 4
+
+
+ 172 008f 60       		.byte	96
+ 173 0090 18       		.byte	24
+ 174 0091 C0       		.byte	-64
+ 175 0092 19       		.byte	25
+ 176 0093 08       		.byte	8
+ 177 0094 1A       		.byte	26
+ 178 0095 04       		.byte	4
+ 179 0096 1C       		.byte	28
+ 180 0097 C0       		.byte	-64
+ 181 0098 1D       		.byte	29
+ 182 0099 64       		.byte	100
+ 183 009a 1E       		.byte	30
+ 184 009b 02       		.byte	2
+ 185 009c 20       		.byte	32
+ 186 009d C0       		.byte	-64
+ 187 009e 21       		.byte	33
+ 188 009f 64       		.byte	100
+ 189 00a0 22       		.byte	34
+ 190 00a1 01       		.byte	1
+ 191 00a2 24       		.byte	36
+ 192 00a3 C0       		.byte	-64
+ 193 00a4 25       		.byte	37
+ 194 00a5 08       		.byte	8
+ 195 00a6 26       		.byte	38
+ 196 00a7 08       		.byte	8
+ 197 00a8 2B       		.byte	43
+ 198 00a9 64       		.byte	100
+ 199 00aa 2C       		.byte	44
+ 200 00ab 90       		.byte	-112
+ 201 00ac 2D       		.byte	45
+ 202 00ad 40       		.byte	64
+ 203 00ae 2E       		.byte	46
+ 204 00af 40       		.byte	64
+ 205 00b0 2F       		.byte	47
+ 206 00b1 02       		.byte	2
+ 207 00b2 31       		.byte	49
+ 208 00b3 80       		.byte	-128
+ 209 00b4 33       		.byte	51
+ 210 00b5 08       		.byte	8
+ 211 00b6 34       		.byte	52
+ 212 00b7 FF       		.byte	-1
+ 213 00b8 35       		.byte	53
+ 214 00b9 F0       		.byte	-16
+ 215 00ba 37       		.byte	55
+ 216 00bb 07       		.byte	7
+ 217 00bc 39       		.byte	57
+ 218 00bd 28       		.byte	40
+ 219 00be 3B       		.byte	59
+ 220 00bf C0       		.byte	-64
+ 221 00c0 3E       		.byte	62
+ 222 00c1 10       		.byte	16
+ 223 00c2 3F       		.byte	63
+ 224 00c3 01       		.byte	1
+ 225 00c4 56       		.byte	86
+ 226 00c5 02       		.byte	2
+ 227 00c6 57       		.byte	87
+ 228 00c7 28       		.byte	40
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 5
+
+
+ 229 00c8 58       		.byte	88
+ 230 00c9 04       		.byte	4
+ 231 00ca 59       		.byte	89
+ 232 00cb 04       		.byte	4
+ 233 00cc 5B       		.byte	91
+ 234 00cd 04       		.byte	4
+ 235 00ce 5F       		.byte	95
+ 236 00cf 01       		.byte	1
+ 237 00d0 80       		.byte	-128
+ 238 00d1 30       		.byte	48
+ 239 00d2 81       		.byte	-127
+ 240 00d3 01       		.byte	1
+ 241 00d4 82       		.byte	-126
+ 242 00d5 0F       		.byte	15
+ 243 00d6 85       		.byte	-123
+ 244 00d7 01       		.byte	1
+ 245 00d8 88       		.byte	-120
+ 246 00d9 D0       		.byte	-48
+ 247 00da 8A       		.byte	-118
+ 248 00db 0C       		.byte	12
+ 249 00dc 8B       		.byte	-117
+ 250 00dd 40       		.byte	64
+ 251 00de 8C       		.byte	-116
+ 252 00df 08       		.byte	8
+ 253 00e0 8D       		.byte	-115
+ 254 00e1 01       		.byte	1
+ 255 00e2 90       		.byte	-112
+ 256 00e3 24       		.byte	36
+ 257 00e4 91       		.byte	-111
+ 258 00e5 A2       		.byte	-94
+ 259 00e6 92       		.byte	-110
+ 260 00e7 10       		.byte	16
+ 261 00e8 93       		.byte	-109
+ 262 00e9 08       		.byte	8
+ 263 00ea 95       		.byte	-107
+ 264 00eb 04       		.byte	4
+ 265 00ec 96       		.byte	-106
+ 266 00ed 80       		.byte	-128
+ 267 00ee 98       		.byte	-104
+ 268 00ef 11       		.byte	17
+ 269 00f0 99       		.byte	-103
+ 270 00f1 08       		.byte	8
+ 271 00f2 9A       		.byte	-102
+ 272 00f3 22       		.byte	34
+ 273 00f4 9B       		.byte	-101
+ 274 00f5 61       		.byte	97
+ 275 00f6 9C       		.byte	-100
+ 276 00f7 0C       		.byte	12
+ 277 00f8 9D       		.byte	-99
+ 278 00f9 10       		.byte	16
+ 279 00fa 9E       		.byte	-98
+ 280 00fb D0       		.byte	-48
+ 281 00fc A0       		.byte	-96
+ 282 00fd DC       		.byte	-36
+ 283 00fe A1       		.byte	-95
+ 284 00ff 01       		.byte	1
+ 285 0100 A4       		.byte	-92
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 6
+
+
+ 286 0101 D4       		.byte	-44
+ 287 0102 A5       		.byte	-91
+ 288 0103 07       		.byte	7
+ 289 0104 A6       		.byte	-90
+ 290 0105 08       		.byte	8
+ 291 0106 A7       		.byte	-89
+ 292 0107 D8       		.byte	-40
+ 293 0108 A8       		.byte	-88
+ 294 0109 21       		.byte	33
+ 295 010a AA       		.byte	-86
+ 296 010b 1E       		.byte	30
+ 297 010c AC       		.byte	-84
+ 298 010d DC       		.byte	-36
+ 299 010e AD       		.byte	-83
+ 300 010f 01       		.byte	1
+ 301 0110 B0       		.byte	-80
+ 302 0111 30       		.byte	48
+ 303 0112 B2       		.byte	-78
+ 304 0113 80       		.byte	-128
+ 305 0114 B3       		.byte	-77
+ 306 0115 E0       		.byte	-32
+ 307 0116 B4       		.byte	-76
+ 308 0117 0F       		.byte	15
+ 309 0118 B5       		.byte	-75
+ 310 0119 3F       		.byte	63
+ 311 011a B6       		.byte	-74
+ 312 011b 40       		.byte	64
+ 313 011c B9       		.byte	-71
+ 314 011d 20       		.byte	32
+ 315 011e BA       		.byte	-70
+ 316 011f 02       		.byte	2
+ 317 0120 BE       		.byte	-66
+ 318 0121 44       		.byte	68
+ 319 0122 BF       		.byte	-65
+ 320 0123 10       		.byte	16
+ 321 0124 D4       		.byte	-44
+ 322 0125 40       		.byte	64
+ 323 0126 D8       		.byte	-40
+ 324 0127 04       		.byte	4
+ 325 0128 D9       		.byte	-39
+ 326 0129 04       		.byte	4
+ 327 012a DB       		.byte	-37
+ 328 012b 04       		.byte	4
+ 329 012c DF       		.byte	-33
+ 330 012d 01       		.byte	1
+ 331 012e 02       		.byte	2
+ 332 012f 80       		.byte	-128
+ 333 0130 03       		.byte	3
+ 334 0131 06       		.byte	6
+ 335 0132 04       		.byte	4
+ 336 0133 28       		.byte	40
+ 337 0134 06       		.byte	6
+ 338 0135 40       		.byte	64
+ 339 0136 07       		.byte	7
+ 340 0137 01       		.byte	1
+ 341 0138 09       		.byte	9
+ 342 0139 48       		.byte	72
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 7
+
+
+ 343 013a 0A       		.byte	10
+ 344 013b 48       		.byte	72
+ 345 013c 0E       		.byte	14
+ 346 013d 46       		.byte	70
+ 347 013e 0F       		.byte	15
+ 348 013f 20       		.byte	32
+ 349 0140 11       		.byte	17
+ 350 0141 25       		.byte	37
+ 351 0142 12       		.byte	18
+ 352 0143 01       		.byte	1
+ 353 0144 15       		.byte	21
+ 354 0145 40       		.byte	64
+ 355 0146 17       		.byte	23
+ 356 0147 06       		.byte	6
+ 357 0148 19       		.byte	25
+ 358 0149 95       		.byte	-107
+ 359 014a 1A       		.byte	26
+ 360 014b 49       		.byte	73
+ 361 014c 1B       		.byte	27
+ 362 014d 10       		.byte	16
+ 363 014e 1F       		.byte	31
+ 364 014f 20       		.byte	32
+ 365 0150 22       		.byte	34
+ 366 0151 20       		.byte	32
+ 367 0152 23       		.byte	35
+ 368 0153 10       		.byte	16
+ 369 0154 24       		.byte	36
+ 370 0155 68       		.byte	104
+ 371 0156 25       		.byte	37
+ 372 0157 30       		.byte	48
+ 373 0158 26       		.byte	38
+ 374 0159 88       		.byte	-120
+ 375 015a 27       		.byte	39
+ 376 015b 09       		.byte	9
+ 377 015c 29       		.byte	41
+ 378 015d 41       		.byte	65
+ 379 015e 2B       		.byte	43
+ 380 015f 10       		.byte	16
+ 381 0160 2D       		.byte	45
+ 382 0161 11       		.byte	17
+ 383 0162 2F       		.byte	47
+ 384 0163 22       		.byte	34
+ 385 0164 30       		.byte	48
+ 386 0165 80       		.byte	-128
+ 387 0166 31       		.byte	49
+ 388 0167 20       		.byte	32
+ 389 0168 32       		.byte	50
+ 390 0169 08       		.byte	8
+ 391 016a 33       		.byte	51
+ 392 016b 01       		.byte	1
+ 393 016c 36       		.byte	54
+ 394 016d 60       		.byte	96
+ 395 016e 37       		.byte	55
+ 396 016f 09       		.byte	9
+ 397 0170 38       		.byte	56
+ 398 0171 82       		.byte	-126
+ 399 0172 39       		.byte	57
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 8
+
+
+ 400 0173 04       		.byte	4
+ 401 0174 3B       		.byte	59
+ 402 0175 10       		.byte	16
+ 403 0176 3E       		.byte	62
+ 404 0177 46       		.byte	70
+ 405 0178 3F       		.byte	63
+ 406 0179 20       		.byte	32
+ 407 017a 60       		.byte	96
+ 408 017b 01       		.byte	1
+ 409 017c 61       		.byte	97
+ 410 017d 04       		.byte	4
+ 411 017e 62       		.byte	98
+ 412 017f 10       		.byte	16
+ 413 0180 65       		.byte	101
+ 414 0181 08       		.byte	8
+ 415 0182 6C       		.byte	108
+ 416 0183 41       		.byte	65
+ 417 0184 6D       		.byte	109
+ 418 0185 D5       		.byte	-43
+ 419 0186 6E       		.byte	110
+ 420 0187 86       		.byte	-122
+ 421 0188 6F       		.byte	111
+ 422 0189 04       		.byte	4
+ 423 018a 75       		.byte	117
+ 424 018b 40       		.byte	64
+ 425 018c 76       		.byte	118
+ 426 018d 03       		.byte	3
+ 427 018e 77       		.byte	119
+ 428 018f 02       		.byte	2
+ 429 0190 8B       		.byte	-117
+ 430 0191 10       		.byte	16
+ 431 0192 8C       		.byte	-116
+ 432 0193 01       		.byte	1
+ 433 0194 8D       		.byte	-115
+ 434 0195 08       		.byte	8
+ 435 0196 C0       		.byte	-64
+ 436 0197 FB       		.byte	-5
+ 437 0198 C2       		.byte	-62
+ 438 0199 FF       		.byte	-1
+ 439 019a C4       		.byte	-60
+ 440 019b BF       		.byte	-65
+ 441 019c CA       		.byte	-54
+ 442 019d FB       		.byte	-5
+ 443 019e CC       		.byte	-52
+ 444 019f FF       		.byte	-1
+ 445 01a0 CE       		.byte	-50
+ 446 01a1 FF       		.byte	-1
+ 447 01a2 D8       		.byte	-40
+ 448 01a3 4E       		.byte	78
+ 449 01a4 0C       		.byte	12
+ 450 01a5 05       		.byte	5
+ 451 01a6 0E       		.byte	14
+ 452 01a7 02       		.byte	2
+ 453 01a8 14       		.byte	20
+ 454 01a9 04       		.byte	4
+ 455 01aa 16       		.byte	22
+ 456 01ab 03       		.byte	3
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 9
+
+
+ 457 01ac 18       		.byte	24
+ 458 01ad 01       		.byte	1
+ 459 01ae 1A       		.byte	26
+ 460 01af 06       		.byte	6
+ 461 01b0 24       		.byte	36
+ 462 01b1 03       		.byte	3
+ 463 01b2 26       		.byte	38
+ 464 01b3 04       		.byte	4
+ 465 01b4 32       		.byte	50
+ 466 01b5 07       		.byte	7
+ 467 01b6 3A       		.byte	58
+ 468 01b7 08       		.byte	8
+ 469 01b8 40       		.byte	64
+ 470 01b9 24       		.byte	36
+ 471 01ba 41       		.byte	65
+ 472 01bb 06       		.byte	6
+ 473 01bc 42       		.byte	66
+ 474 01bd 50       		.byte	80
+ 475 01be 44       		.byte	68
+ 476 01bf 01       		.byte	1
+ 477 01c0 45       		.byte	69
+ 478 01c1 0E       		.byte	14
+ 479 01c2 46       		.byte	70
+ 480 01c3 FB       		.byte	-5
+ 481 01c4 47       		.byte	71
+ 482 01c5 CD       		.byte	-51
+ 483 01c6 48       		.byte	72
+ 484 01c7 3D       		.byte	61
+ 485 01c8 49       		.byte	73
+ 486 01c9 FF       		.byte	-1
+ 487 01ca 4A       		.byte	74
+ 488 01cb FF       		.byte	-1
+ 489 01cc 4B       		.byte	75
+ 490 01cd FF       		.byte	-1
+ 491 01ce 4C       		.byte	76
+ 492 01cf 22       		.byte	34
+ 493 01d0 4E       		.byte	78
+ 494 01d1 F0       		.byte	-16
+ 495 01d2 4F       		.byte	79
+ 496 01d3 08       		.byte	8
+ 497 01d4 50       		.byte	80
+ 498 01d5 04       		.byte	4
+ 499 01d6 58       		.byte	88
+ 500 01d7 04       		.byte	4
+ 501 01d8 5A       		.byte	90
+ 502 01d9 04       		.byte	4
+ 503 01da 5F       		.byte	95
+ 504 01db 01       		.byte	1
+ 505 01dc 62       		.byte	98
+ 506 01dd C0       		.byte	-64
+ 507 01de 64       		.byte	100
+ 508 01df 40       		.byte	64
+ 509 01e0 65       		.byte	101
+ 510 01e1 01       		.byte	1
+ 511 01e2 66       		.byte	102
+ 512 01e3 10       		.byte	16
+ 513 01e4 67       		.byte	103
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 10
+
+
+ 514 01e5 11       		.byte	17
+ 515 01e6 68       		.byte	104
+ 516 01e7 C0       		.byte	-64
+ 517 01e8 69       		.byte	105
+ 518 01e9 01       		.byte	1
+ 519 01ea 6B       		.byte	107
+ 520 01eb 11       		.byte	17
+ 521 01ec 6C       		.byte	108
+ 522 01ed 40       		.byte	64
+ 523 01ee 6D       		.byte	109
+ 524 01ef 01       		.byte	1
+ 525 01f0 6E       		.byte	110
+ 526 01f1 40       		.byte	64
+ 527 01f2 6F       		.byte	111
+ 528 01f3 01       		.byte	1
+ 529 01f4 80       		.byte	-128
+ 530 01f5 0D       		.byte	13
+ 531 01f6 87       		.byte	-121
+ 532 01f7 01       		.byte	1
+ 533 01f8 88       		.byte	-120
+ 534 01f9 91       		.byte	-111
+ 535 01fa 8A       		.byte	-118
+ 536 01fb 22       		.byte	34
+ 537 01fc 8C       		.byte	-116
+ 538 01fd 0D       		.byte	13
+ 539 01fe 8F       		.byte	-113
+ 540 01ff EC       		.byte	-20
+ 541 0200 91       		.byte	-111
+ 542 0201 88       		.byte	-120
+ 543 0202 93       		.byte	-109
+ 544 0203 03       		.byte	3
+ 545 0204 94       		.byte	-108
+ 546 0205 60       		.byte	96
+ 547 0206 95       		.byte	-107
+ 548 0207 04       		.byte	4
+ 549 0208 97       		.byte	-105
+ 550 0209 43       		.byte	67
+ 551 020a 98       		.byte	-104
+ 552 020b 92       		.byte	-110
+ 553 020c 99       		.byte	-103
+ 554 020d 21       		.byte	33
+ 555 020e 9A       		.byte	-102
+ 556 020f 44       		.byte	68
+ 557 0210 9B       		.byte	-101
+ 558 0211 02       		.byte	2
+ 559 0212 9C       		.byte	-100
+ 560 0213 02       		.byte	2
+ 561 0214 9E       		.byte	-98
+ 562 0215 0D       		.byte	13
+ 563 0216 A0       		.byte	-96
+ 564 0217 A2       		.byte	-94
+ 565 0218 A2       		.byte	-94
+ 566 0219 18       		.byte	24
+ 567 021a A3       		.byte	-93
+ 568 021b 12       		.byte	18
+ 569 021c A4       		.byte	-92
+ 570 021d 0D       		.byte	13
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 11
+
+
+ 571 021e A8       		.byte	-88
+ 572 021f 0D       		.byte	13
+ 573 0220 A9       		.byte	-87
+ 574 0221 E0       		.byte	-32
+ 575 0222 AC       		.byte	-84
+ 576 0223 0D       		.byte	13
+ 577 0224 B0       		.byte	-80
+ 578 0225 80       		.byte	-128
+ 579 0226 B2       		.byte	-78
+ 580 0227 70       		.byte	112
+ 581 0228 B3       		.byte	-77
+ 582 0229 10       		.byte	16
+ 583 022a B5       		.byte	-75
+ 584 022b E0       		.byte	-32
+ 585 022c B6       		.byte	-74
+ 586 022d 0F       		.byte	15
+ 587 022e B7       		.byte	-73
+ 588 022f 0F       		.byte	15
+ 589 0230 B8       		.byte	-72
+ 590 0231 08       		.byte	8
+ 591 0232 BA       		.byte	-70
+ 592 0233 80       		.byte	-128
+ 593 0234 BE       		.byte	-66
+ 594 0235 01       		.byte	1
+ 595 0236 BF       		.byte	-65
+ 596 0237 10       		.byte	16
+ 597 0238 D4       		.byte	-44
+ 598 0239 09       		.byte	9
+ 599 023a D8       		.byte	-40
+ 600 023b 04       		.byte	4
+ 601 023c D9       		.byte	-39
+ 602 023d 04       		.byte	4
+ 603 023e DB       		.byte	-37
+ 604 023f 04       		.byte	4
+ 605 0240 DF       		.byte	-33
+ 606 0241 01       		.byte	1
+ 607 0242 03       		.byte	3
+ 608 0243 01       		.byte	1
+ 609 0244 04       		.byte	4
+ 610 0245 82       		.byte	-126
+ 611 0246 05       		.byte	5
+ 612 0247 10       		.byte	16
+ 613 0248 0A       		.byte	10
+ 614 0249 18       		.byte	24
+ 615 024a 0D       		.byte	13
+ 616 024b 20       		.byte	32
+ 617 024c 0E       		.byte	14
+ 618 024d 22       		.byte	34
+ 619 024e 13       		.byte	19
+ 620 024f 08       		.byte	8
+ 621 0250 15       		.byte	21
+ 622 0251 14       		.byte	20
+ 623 0252 16       		.byte	22
+ 624 0253 01       		.byte	1
+ 625 0254 17       		.byte	23
+ 626 0255 01       		.byte	1
+ 627 0256 19       		.byte	25
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 12
+
+
+ 628 0257 08       		.byte	8
+ 629 0258 1A       		.byte	26
+ 630 0259 10       		.byte	16
+ 631 025a 1E       		.byte	30
+ 632 025b 22       		.byte	34
+ 633 025c 1F       		.byte	31
+ 634 025d 09       		.byte	9
+ 635 025e 24       		.byte	36
+ 636 025f 08       		.byte	8
+ 637 0260 25       		.byte	37
+ 638 0261 44       		.byte	68
+ 639 0262 2C       		.byte	44
+ 640 0263 80       		.byte	-128
+ 641 0264 2F       		.byte	47
+ 642 0265 08       		.byte	8
+ 643 0266 35       		.byte	53
+ 644 0267 10       		.byte	16
+ 645 0268 37       		.byte	55
+ 646 0269 09       		.byte	9
+ 647 026a 3D       		.byte	61
+ 648 026b 88       		.byte	-120
+ 649 026c 41       		.byte	65
+ 650 026d A0       		.byte	-96
+ 651 026e 43       		.byte	67
+ 652 026f 01       		.byte	1
+ 653 0270 49       		.byte	73
+ 654 0271 90       		.byte	-112
+ 655 0272 4B       		.byte	75
+ 656 0273 04       		.byte	4
+ 657 0274 50       		.byte	80
+ 658 0275 80       		.byte	-128
+ 659 0276 51       		.byte	81
+ 660 0277 08       		.byte	8
+ 661 0278 52       		.byte	82
+ 662 0279 50       		.byte	80
+ 663 027a 53       		.byte	83
+ 664 027b 02       		.byte	2
+ 665 027c 5C       		.byte	92
+ 666 027d 40       		.byte	64
+ 667 027e 5E       		.byte	94
+ 668 027f 01       		.byte	1
+ 669 0280 5F       		.byte	95
+ 670 0281 14       		.byte	20
+ 671 0282 67       		.byte	103
+ 672 0283 02       		.byte	2
+ 673 0284 85       		.byte	-123
+ 674 0285 80       		.byte	-128
+ 675 0286 90       		.byte	-112
+ 676 0287 C2       		.byte	-62
+ 677 0288 91       		.byte	-111
+ 678 0289 14       		.byte	20
+ 679 028a 92       		.byte	-110
+ 680 028b 09       		.byte	9
+ 681 028c 99       		.byte	-103
+ 682 028d 90       		.byte	-112
+ 683 028e 9A       		.byte	-102
+ 684 028f 01       		.byte	1
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 13
+
+
+ 685 0290 9B       		.byte	-101
+ 686 0291 09       		.byte	9
+ 687 0292 9D       		.byte	-99
+ 688 0293 08       		.byte	8
+ 689 0294 9E       		.byte	-98
+ 690 0295 50       		.byte	80
+ 691 0296 A1       		.byte	-95
+ 692 0297 20       		.byte	32
+ 693 0298 A4       		.byte	-92
+ 694 0299 80       		.byte	-128
+ 695 029a A5       		.byte	-91
+ 696 029b 08       		.byte	8
+ 697 029c A7       		.byte	-89
+ 698 029d 02       		.byte	2
+ 699 029e C0       		.byte	-64
+ 700 029f D1       		.byte	-47
+ 701 02a0 C2       		.byte	-62
+ 702 02a1 E6       		.byte	-26
+ 703 02a2 C4       		.byte	-60
+ 704 02a3 F4       		.byte	-12
+ 705 02a4 CA       		.byte	-54
+ 706 02a5 A0       		.byte	-96
+ 707 02a6 CC       		.byte	-52
+ 708 02a7 E0       		.byte	-32
+ 709 02a8 CE       		.byte	-50
+ 710 02a9 50       		.byte	80
+ 711 02aa D0       		.byte	-48
+ 712 02ab 0D       		.byte	13
+ 713 02ac D2       		.byte	-46
+ 714 02ad 0C       		.byte	12
+ 715 02ae D6       		.byte	-42
+ 716 02af F0       		.byte	-16
+ 717 02b0 D8       		.byte	-40
+ 718 02b1 10       		.byte	16
+ 719 02b2 A8       		.byte	-88
+ 720 02b3 04       		.byte	4
+ 721 02b4 B3       		.byte	-77
+ 722 02b5 12       		.byte	18
+ 723 02b6 E4       		.byte	-28
+ 724 02b7 80       		.byte	-128
+ 725 02b8 EA       		.byte	-22
+ 726 02b9 01       		.byte	1
+ 727 02ba EA       		.byte	-22
+ 728 02bb 01       		.byte	1
+ 729 02bc 00       		.byte	0
+ 730 02bd 08       		.byte	8
+ 731 02be 3E       		.byte	62
+ 732 02bf 10       		.byte	16
+ 733 02c0 52       		.byte	82
+ 734 02c1 20       		.byte	32
+ 735 02c2 84       		.byte	-124
+ 736 02c3 04       		.byte	4
+ 737 02c4 C0       		.byte	-64
+ 738 02c5 10       		.byte	16
+ 739 02c6 CE       		.byte	-50
+ 740 02c7 20       		.byte	32
+ 741 02c8 D4       		.byte	-44
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 14
+
+
+ 742 02c9 20       		.byte	32
+ 743 02ca E4       		.byte	-28
+ 744 02cb 40       		.byte	64
+ 745 02cc 96       		.byte	-106
+ 746 02cd 10       		.byte	16
+ 747 02ce AA       		.byte	-86
+ 748 02cf 20       		.byte	32
+ 749 02d0 EE       		.byte	-18
+ 750 02d1 80       		.byte	-128
+ 751 02d2 73       		.byte	115
+ 752 02d3 10       		.byte	16
+ 753 02d4 DC       		.byte	-36
+ 754 02d5 01       		.byte	1
+ 755 02d6 00       		.byte	0
+ 756 02d7 01       		.byte	1
+ 757 02d8 04       		.byte	4
+ 758 02d9 02       		.byte	2
+ 759 02da 54       		.byte	84
+ 760 02db 80       		.byte	-128
+ 761 02dc 58       		.byte	88
+ 762 02dd 10       		.byte	16
+ 763 02de 8B       		.byte	-117
+ 764 02df 10       		.byte	16
+ 765 02e0 97       		.byte	-105
+ 766 02e1 10       		.byte	16
+ 767 02e2 C0       		.byte	-64
+ 768 02e3 0C       		.byte	12
+ 769 02e4 D4       		.byte	-44
+ 770 02e5 03       		.byte	3
+ 771 02e6 E4       		.byte	-28
+ 772 02e7 01       		.byte	1
+ 773 02e8 90       		.byte	-112
+ 774 02e9 01       		.byte	1
+ 775 02ea 98       		.byte	-104
+ 776 02eb 20       		.byte	32
+ 777 02ec 9C       		.byte	-100
+ 778 02ed 10       		.byte	16
+ 779 02ee A4       		.byte	-92
+ 780 02ef 80       		.byte	-128
+ 781 02f0 B4       		.byte	-76
+ 782 02f1 21       		.byte	33
+ 783 02f2 90       		.byte	-112
+ 784 02f3 01       		.byte	1
+ 785 02f4 98       		.byte	-104
+ 786 02f5 20       		.byte	32
+ 787 02f6 9C       		.byte	-100
+ 788 02f7 10       		.byte	16
+ 789 02f8 A4       		.byte	-92
+ 790 02f9 80       		.byte	-128
+ 791 02fa 96       		.byte	-106
+ 792 02fb 10       		.byte	16
+ 793 02fc AA       		.byte	-86
+ 794 02fd 10       		.byte	16
+ 795 02fe EA       		.byte	-22
+ 796 02ff 80       		.byte	-128
+ 797 0300 10       		.byte	16
+ 798 0301 80       		.byte	-128
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 15
+
+
+ 799 0302 13       		.byte	19
+ 800 0303 20       		.byte	32
+ 801 0304 14       		.byte	20
+ 802 0305 10       		.byte	16
+ 803 0306 78       		.byte	120
+ 804 0307 20       		.byte	32
+ 805 0308 7C       		.byte	124
+ 806 0309 01       		.byte	1
+ 807 030a 90       		.byte	-112
+ 808 030b 01       		.byte	1
+ 809 030c 98       		.byte	-104
+ 810 030d 20       		.byte	32
+ 811 030e 9C       		.byte	-100
+ 812 030f 10       		.byte	16
+ 813 0310 A4       		.byte	-92
+ 814 0311 80       		.byte	-128
+ 815 0312 C4       		.byte	-60
+ 816 0313 0E       		.byte	14
+ 817 0314 DE       		.byte	-34
+ 818 0315 03       		.byte	3
+ 819 0316 AB       		.byte	-85
+ 820 0317 20       		.byte	32
+ 821 0318 00       		.byte	0
+ 822 0319 01       		.byte	1
+ 823 031a 08       		.byte	8
+ 824 031b 01       		.byte	1
+ 825 031c 0A       		.byte	10
+ 826 031d 01       		.byte	1
+ 827 031e 03       		.byte	3
+ 828 031f C0       		.byte	-64
+ 829 0320 78       		.byte	120
+ 830 0321 00       		.byte	0
+ 831 0322 00       		.byte	0
+ 832 0323 78       		.byte	120
+ 833 0324 00       		.byte	0
+ 834 0325 00       		.byte	0
+ 835 0326 00       		.byte	0
+ 836 0327 00       		.byte	0
+ 837 0328 00       		.byte	0
+ 838 0329 00       		.byte	0
+ 839 032a 00       		.byte	0
+ 840 032b 00       		.byte	0
+ 841 032c 04       		.byte	4
+ 842 032d 19       		.byte	25
+ 843 032e 19       		.byte	25
+ 844 032f 00       		.byte	0
+ 845 0330 18       		.byte	24
+ 846 0331 00       		.byte	0
+ 847 0332 00       		.byte	0
+ 848 0333 00       		.byte	0
+ 849 0334 10       		.byte	16
+ 850 0335 00       		.byte	0
+ 851 0336 00       		.byte	0
+ 852 0337 10       		.byte	16
+ 853 0338 00       		.byte	0
+ 854 0339 00       		.byte	0
+ 855 033a 00       		.byte	0
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 16
+
+
+ 856 033b 00       		.byte	0
+ 857 033c 00       		.byte	0
+ 858 033d 00       		.byte	0
+ 859 033e 00       		.byte	0
+ 860 033f 00       		.byte	0
+ 861 0340 80       		.byte	-128
+ 862 0341 00       		.byte	0
+ 863 0342 00       		.byte	0
+ 864 0343 8B       		.byte	-117
+ 865 0344 0B       		.byte	11
+ 866 0345 00       		.byte	0
+ 867 0346 00       		.byte	0
+ 868 0347 00       		.byte	0
+ 869 0348 00       		.byte	0
+ 870 0349 00       		.byte	0
+ 871 034a 00       		.byte	0
+ 872 034b 00       		.byte	0
+ 873 034c 03       		.byte	3
+ 874 034d 00       		.byte	0
+ 875 034e 04       		.byte	4
+ 876 034f 00       		.byte	0
+ 877 0350 03       		.byte	3
+ 878 0351 00       		.byte	0
+ 879 0352 03       		.byte	3
+ 880 0353 00       		.byte	0
+ 881 0354 00       		.byte	0
+ 882 0355 00       		.byte	0
+ 883 0356 00       		.byte	0
+ 884 0357 00       		.byte	0
+ 885 0358 00       		.byte	0
+ 886 0359 3F       		.byte	63
+ 887 035a 3F       		.byte	63
+ 888 035b 00       		.byte	0
+ 889 035c 00       		.byte	0
+ 890 035d 00       		.byte	0
+ 891 035e 00       		.byte	0
+ 892 035f 00       		.byte	0
+ 893              		.section	.cywolatch,"a",%progbits
+ 894              		.align	2
+ 895              		.type	cy_meta_wonvl, %object
+ 896              		.size	cy_meta_wonvl, 4
+ 897              	cy_meta_wonvl:
+ 898 0000 BC       		.byte	-68
+ 899 0001 90       		.byte	-112
+ 900 0002 AC       		.byte	-84
+ 901 0003 AF       		.byte	-81
+ 902              		.section	.cycustnvl,"a",%progbits
+ 903              		.align	2
+ 904              		.type	cy_meta_custnvl, %object
+ 905              		.size	cy_meta_custnvl, 4
+ 906              	cy_meta_custnvl:
+ 907 0000 C0       		.byte	-64
+ 908 0001 00       		.byte	0
+ 909 0002 40       		.byte	64
+ 910 0003 05       		.byte	5
+ 911              		.section	.cymeta,"a",%progbits
+ 912              		.align	2
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 17
+
+
+ 913              		.type	cy_metadata, %object
+ 914              		.size	cy_metadata, 12
+ 915              	cy_metadata:
+ 916 0000 00       		.byte	0
+ 917 0001 01       		.byte	1
+ 918 0002 2E       		.byte	46
+ 919 0003 16       		.byte	22
+ 920 0004 10       		.byte	16
+ 921 0005 69       		.byte	105
+ 922 0006 00       		.byte	0
+ 923 0007 01       		.byte	1
+ 924 0008 00       		.byte	0
+ 925 0009 00       		.byte	0
+ 926 000a 00       		.byte	0
+ 927 000b 00       		.byte	0
+ 928              		.section	.cyflashprotect,"a",%progbits
+ 929              		.align	2
+ 930              		.type	cy_meta_flashprotect, %object
+ 931              		.size	cy_meta_flashprotect, 256
+ 932              	cy_meta_flashprotect:
+ 933 0000 00000000 		.space	256
+ 933      00000000 
+ 933      00000000 
+ 933      00000000 
+ 933      00000000 
+ 934              		.text
+ 935              	.Letext0:
+ 936              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 937              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 938              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 939              		.section	.debug_info,"",%progbits
+ 940              	.Ldebug_info0:
+ 941 0000 31010000 		.4byte	0x131
+ 942 0004 0400     		.2byte	0x4
+ 943 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 944 000a 04       		.byte	0x4
+ 945 000b 01       		.uleb128 0x1
+ 946 000c 7B000000 		.4byte	.LASF17
+ 947 0010 0C       		.byte	0xc
+ 948 0011 D5010000 		.4byte	.LASF18
+ 949 0015 0A000000 		.4byte	.LASF19
+ 950 0019 00000000 		.4byte	.Ldebug_line0
+ 951 001d 02       		.uleb128 0x2
+ 952 001e 01       		.byte	0x1
+ 953 001f 06       		.byte	0x6
+ 954 0020 C9010000 		.4byte	.LASF0
+ 955 0024 03       		.uleb128 0x3
+ 956 0025 00000000 		.4byte	.LASF9
+ 957 0029 01       		.byte	0x1
+ 958 002a 1D       		.byte	0x1d
+ 959 002b 2F000000 		.4byte	0x2f
+ 960 002f 02       		.uleb128 0x2
+ 961 0030 01       		.byte	0x1
+ 962 0031 08       		.byte	0x8
+ 963 0032 6D000000 		.4byte	.LASF1
+ 964 0036 02       		.uleb128 0x2
+ 965 0037 02       		.byte	0x2
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 18
+
+
+ 966 0038 05       		.byte	0x5
+ 967 0039 B6010000 		.4byte	.LASF2
+ 968 003d 02       		.uleb128 0x2
+ 969 003e 02       		.byte	0x2
+ 970 003f 07       		.byte	0x7
+ 971 0040 1B010000 		.4byte	.LASF3
+ 972 0044 02       		.uleb128 0x2
+ 973 0045 04       		.byte	0x4
+ 974 0046 05       		.byte	0x5
+ 975 0047 C0010000 		.4byte	.LASF4
+ 976 004b 02       		.uleb128 0x2
+ 977 004c 04       		.byte	0x4
+ 978 004d 07       		.byte	0x7
+ 979 004e 09010000 		.4byte	.LASF5
+ 980 0052 02       		.uleb128 0x2
+ 981 0053 08       		.byte	0x8
+ 982 0054 05       		.byte	0x5
+ 983 0055 A8010000 		.4byte	.LASF6
+ 984 0059 02       		.uleb128 0x2
+ 985 005a 08       		.byte	0x8
+ 986 005b 07       		.byte	0x7
+ 987 005c 5D010000 		.4byte	.LASF7
+ 988 0060 04       		.uleb128 0x4
+ 989 0061 04       		.byte	0x4
+ 990 0062 05       		.byte	0x5
+ 991 0063 696E7400 		.ascii	"int\000"
+ 992 0067 02       		.uleb128 0x2
+ 993 0068 04       		.byte	0x4
+ 994 0069 07       		.byte	0x7
+ 995 006a 50010000 		.4byte	.LASF8
+ 996 006e 03       		.uleb128 0x3
+ 997 006f 74010000 		.4byte	.LASF10
+ 998 0073 02       		.byte	0x2
+ 999 0074 18       		.byte	0x18
+ 1000 0075 24000000 		.4byte	0x24
+ 1001 0079 05       		.uleb128 0x5
+ 1002 007a 91000000 		.4byte	0x91
+ 1003 007e 8A000000 		.4byte	0x8a
+ 1004 0082 06       		.uleb128 0x6
+ 1005 0083 8A000000 		.4byte	0x8a
+ 1006 0087 5F03     		.2byte	0x35f
+ 1007 0089 00       		.byte	0
+ 1008 008a 02       		.uleb128 0x2
+ 1009 008b 04       		.byte	0x4
+ 1010 008c 07       		.byte	0x7
+ 1011 008d 9F010000 		.4byte	.LASF11
+ 1012 0091 07       		.uleb128 0x7
+ 1013 0092 6E000000 		.4byte	0x6e
+ 1014 0096 08       		.uleb128 0x8
+ 1015 0097 3E010000 		.4byte	.LASF12
+ 1016 009b 03       		.byte	0x3
+ 1017 009c 1F       		.byte	0x1f
+ 1018 009d A7000000 		.4byte	0xa7
+ 1019 00a1 05       		.uleb128 0x5
+ 1020 00a2 03       		.byte	0x3
+ 1021 00a3 00000000 		.4byte	cy_meta_configecc
+ 1022 00a7 07       		.uleb128 0x7
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 19
+
+
+ 1023 00a8 79000000 		.4byte	0x79
+ 1024 00ac 05       		.uleb128 0x5
+ 1025 00ad 91000000 		.4byte	0x91
+ 1026 00b1 BC000000 		.4byte	0xbc
+ 1027 00b5 09       		.uleb128 0x9
+ 1028 00b6 8A000000 		.4byte	0x8a
+ 1029 00ba 03       		.byte	0x3
+ 1030 00bb 00       		.byte	0
+ 1031 00bc 08       		.uleb128 0x8
+ 1032 00bd 2E010000 		.4byte	.LASF13
+ 1033 00c1 03       		.byte	0x3
+ 1034 00c2 98       		.byte	0x98
+ 1035 00c3 CD000000 		.4byte	0xcd
+ 1036 00c7 05       		.uleb128 0x5
+ 1037 00c8 03       		.byte	0x3
+ 1038 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1039 00cd 07       		.uleb128 0x7
+ 1040 00ce AC000000 		.4byte	0xac
+ 1041 00d2 08       		.uleb128 0x8
+ 1042 00d3 91010000 		.4byte	.LASF14
+ 1043 00d7 03       		.byte	0x3
+ 1044 00d8 A6       		.byte	0xa6
+ 1045 00d9 E3000000 		.4byte	0xe3
+ 1046 00dd 05       		.uleb128 0x5
+ 1047 00de 03       		.byte	0x3
+ 1048 00df 00000000 		.4byte	cy_meta_wonvl
+ 1049 00e3 07       		.uleb128 0x7
+ 1050 00e4 AC000000 		.4byte	0xac
+ 1051 00e8 05       		.uleb128 0x5
+ 1052 00e9 91000000 		.4byte	0x91
+ 1053 00ed F8000000 		.4byte	0xf8
+ 1054 00f1 09       		.uleb128 0x9
+ 1055 00f2 8A000000 		.4byte	0x8a
+ 1056 00f6 FF       		.byte	0xff
+ 1057 00f7 00       		.byte	0
+ 1058 00f8 08       		.uleb128 0x8
+ 1059 00f9 7C010000 		.4byte	.LASF15
+ 1060 00fd 03       		.byte	0x3
+ 1061 00fe B4       		.byte	0xb4
+ 1062 00ff 09010000 		.4byte	0x109
+ 1063 0103 05       		.uleb128 0x5
+ 1064 0104 03       		.byte	0x3
+ 1065 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1066 0109 07       		.uleb128 0x7
+ 1067 010a E8000000 		.4byte	0xe8
+ 1068 010e 05       		.uleb128 0x5
+ 1069 010f 91000000 		.4byte	0x91
+ 1070 0113 1E010000 		.4byte	0x11e
+ 1071 0117 09       		.uleb128 0x9
+ 1072 0118 8A000000 		.4byte	0x8a
+ 1073 011c 0B       		.byte	0xb
+ 1074 011d 00       		.byte	0
+ 1075 011e 08       		.uleb128 0x8
+ 1076 011f 61000000 		.4byte	.LASF16
+ 1077 0123 03       		.byte	0x3
+ 1078 0124 E1       		.byte	0xe1
+ 1079 0125 2F010000 		.4byte	0x12f
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 20
+
+
+ 1080 0129 05       		.uleb128 0x5
+ 1081 012a 03       		.byte	0x3
+ 1082 012b 00000000 		.4byte	cy_metadata
+ 1083 012f 07       		.uleb128 0x7
+ 1084 0130 0E010000 		.4byte	0x10e
+ 1085 0134 00       		.byte	0
+ 1086              		.section	.debug_abbrev,"",%progbits
+ 1087              	.Ldebug_abbrev0:
+ 1088 0000 01       		.uleb128 0x1
+ 1089 0001 11       		.uleb128 0x11
+ 1090 0002 01       		.byte	0x1
+ 1091 0003 25       		.uleb128 0x25
+ 1092 0004 0E       		.uleb128 0xe
+ 1093 0005 13       		.uleb128 0x13
+ 1094 0006 0B       		.uleb128 0xb
+ 1095 0007 03       		.uleb128 0x3
+ 1096 0008 0E       		.uleb128 0xe
+ 1097 0009 1B       		.uleb128 0x1b
+ 1098 000a 0E       		.uleb128 0xe
+ 1099 000b 10       		.uleb128 0x10
+ 1100 000c 17       		.uleb128 0x17
+ 1101 000d 00       		.byte	0
+ 1102 000e 00       		.byte	0
+ 1103 000f 02       		.uleb128 0x2
+ 1104 0010 24       		.uleb128 0x24
+ 1105 0011 00       		.byte	0
+ 1106 0012 0B       		.uleb128 0xb
+ 1107 0013 0B       		.uleb128 0xb
+ 1108 0014 3E       		.uleb128 0x3e
+ 1109 0015 0B       		.uleb128 0xb
+ 1110 0016 03       		.uleb128 0x3
+ 1111 0017 0E       		.uleb128 0xe
+ 1112 0018 00       		.byte	0
+ 1113 0019 00       		.byte	0
+ 1114 001a 03       		.uleb128 0x3
+ 1115 001b 16       		.uleb128 0x16
+ 1116 001c 00       		.byte	0
+ 1117 001d 03       		.uleb128 0x3
+ 1118 001e 0E       		.uleb128 0xe
+ 1119 001f 3A       		.uleb128 0x3a
+ 1120 0020 0B       		.uleb128 0xb
+ 1121 0021 3B       		.uleb128 0x3b
+ 1122 0022 0B       		.uleb128 0xb
+ 1123 0023 49       		.uleb128 0x49
+ 1124 0024 13       		.uleb128 0x13
+ 1125 0025 00       		.byte	0
+ 1126 0026 00       		.byte	0
+ 1127 0027 04       		.uleb128 0x4
+ 1128 0028 24       		.uleb128 0x24
+ 1129 0029 00       		.byte	0
+ 1130 002a 0B       		.uleb128 0xb
+ 1131 002b 0B       		.uleb128 0xb
+ 1132 002c 3E       		.uleb128 0x3e
+ 1133 002d 0B       		.uleb128 0xb
+ 1134 002e 03       		.uleb128 0x3
+ 1135 002f 08       		.uleb128 0x8
+ 1136 0030 00       		.byte	0
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 21
+
+
+ 1137 0031 00       		.byte	0
+ 1138 0032 05       		.uleb128 0x5
+ 1139 0033 01       		.uleb128 0x1
+ 1140 0034 01       		.byte	0x1
+ 1141 0035 49       		.uleb128 0x49
+ 1142 0036 13       		.uleb128 0x13
+ 1143 0037 01       		.uleb128 0x1
+ 1144 0038 13       		.uleb128 0x13
+ 1145 0039 00       		.byte	0
+ 1146 003a 00       		.byte	0
+ 1147 003b 06       		.uleb128 0x6
+ 1148 003c 21       		.uleb128 0x21
+ 1149 003d 00       		.byte	0
+ 1150 003e 49       		.uleb128 0x49
+ 1151 003f 13       		.uleb128 0x13
+ 1152 0040 2F       		.uleb128 0x2f
+ 1153 0041 05       		.uleb128 0x5
+ 1154 0042 00       		.byte	0
+ 1155 0043 00       		.byte	0
+ 1156 0044 07       		.uleb128 0x7
+ 1157 0045 26       		.uleb128 0x26
+ 1158 0046 00       		.byte	0
+ 1159 0047 49       		.uleb128 0x49
+ 1160 0048 13       		.uleb128 0x13
+ 1161 0049 00       		.byte	0
+ 1162 004a 00       		.byte	0
+ 1163 004b 08       		.uleb128 0x8
+ 1164 004c 34       		.uleb128 0x34
+ 1165 004d 00       		.byte	0
+ 1166 004e 03       		.uleb128 0x3
+ 1167 004f 0E       		.uleb128 0xe
+ 1168 0050 3A       		.uleb128 0x3a
+ 1169 0051 0B       		.uleb128 0xb
+ 1170 0052 3B       		.uleb128 0x3b
+ 1171 0053 0B       		.uleb128 0xb
+ 1172 0054 49       		.uleb128 0x49
+ 1173 0055 13       		.uleb128 0x13
+ 1174 0056 3F       		.uleb128 0x3f
+ 1175 0057 19       		.uleb128 0x19
+ 1176 0058 02       		.uleb128 0x2
+ 1177 0059 18       		.uleb128 0x18
+ 1178 005a 00       		.byte	0
+ 1179 005b 00       		.byte	0
+ 1180 005c 09       		.uleb128 0x9
+ 1181 005d 21       		.uleb128 0x21
+ 1182 005e 00       		.byte	0
+ 1183 005f 49       		.uleb128 0x49
+ 1184 0060 13       		.uleb128 0x13
+ 1185 0061 2F       		.uleb128 0x2f
+ 1186 0062 0B       		.uleb128 0xb
+ 1187 0063 00       		.byte	0
+ 1188 0064 00       		.byte	0
+ 1189 0065 00       		.byte	0
+ 1190              		.section	.debug_aranges,"",%progbits
+ 1191 0000 14000000 		.4byte	0x14
+ 1192 0004 0200     		.2byte	0x2
+ 1193 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 22
+
+
+ 1194 000a 04       		.byte	0x4
+ 1195 000b 00       		.byte	0
+ 1196 000c 0000     		.2byte	0
+ 1197 000e 0000     		.2byte	0
+ 1198 0010 00000000 		.4byte	0
+ 1199 0014 00000000 		.4byte	0
+ 1200              		.section	.debug_line,"",%progbits
+ 1201              	.Ldebug_line0:
+ 1202 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1202      02003701 
+ 1202      00000201 
+ 1202      FB0E0D00 
+ 1202      01010101 
+ 1203              	.LASF9:
+ 1204 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1204      6E74385F 
+ 1204      7400
+ 1205              	.LASF19:
+ 1206 000a 433A5C55 		.ascii	"C:\\Users\\Barney\\Documents\\PSoC Creator\\GDIP Ha"
+ 1206      73657273 
+ 1206      5C426172 
+ 1206      6E65795C 
+ 1206      446F6375 
+ 1207 0038 6E642044 		.ascii	"nd Dryer Rev1\\GDIP Hand Dryer Rev1.cydsn\000"
+ 1207      72796572 
+ 1207      20526576 
+ 1207      315C4744 
+ 1207      49502048 
+ 1208              	.LASF16:
+ 1209 0061 63795F6D 		.ascii	"cy_metadata\000"
+ 1209      65746164 
+ 1209      61746100 
+ 1210              	.LASF1:
+ 1211 006d 756E7369 		.ascii	"unsigned char\000"
+ 1211      676E6564 
+ 1211      20636861 
+ 1211      7200
+ 1212              	.LASF17:
+ 1213 007b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1213      43313120 
+ 1213      352E342E 
+ 1213      31203230 
+ 1213      31363036 
+ 1214 00ae 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1214      20726576 
+ 1214      6973696F 
+ 1214      6E203233 
+ 1214      37373135 
+ 1215 00e1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1215      66756E63 
+ 1215      74696F6E 
+ 1215      2D736563 
+ 1215      74696F6E 
+ 1216              	.LASF5:
+ 1217 0109 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1217      20756E73 
+ 1217      69676E65 
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 23
+
+
+ 1217      6420696E 
+ 1217      7400
+ 1218              	.LASF3:
+ 1219 011b 73686F72 		.ascii	"short unsigned int\000"
+ 1219      7420756E 
+ 1219      7369676E 
+ 1219      65642069 
+ 1219      6E7400
+ 1220              	.LASF13:
+ 1221 012e 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1221      6574615F 
+ 1221      63757374 
+ 1221      6E766C00 
+ 1222              	.LASF12:
+ 1223 013e 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1223      6574615F 
+ 1223      636F6E66 
+ 1223      69676563 
+ 1223      6300
+ 1224              	.LASF8:
+ 1225 0150 756E7369 		.ascii	"unsigned int\000"
+ 1225      676E6564 
+ 1225      20696E74 
+ 1225      00
+ 1226              	.LASF7:
+ 1227 015d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1227      206C6F6E 
+ 1227      6720756E 
+ 1227      7369676E 
+ 1227      65642069 
+ 1228              	.LASF10:
+ 1229 0174 75696E74 		.ascii	"uint8_t\000"
+ 1229      385F7400 
+ 1230              	.LASF15:
+ 1231 017c 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1231      6574615F 
+ 1231      666C6173 
+ 1231      6870726F 
+ 1231      74656374 
+ 1232              	.LASF14:
+ 1233 0191 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1233      6574615F 
+ 1233      776F6E76 
+ 1233      6C00
+ 1234              	.LASF11:
+ 1235 019f 73697A65 		.ascii	"sizetype\000"
+ 1235      74797065 
+ 1235      00
+ 1236              	.LASF6:
+ 1237 01a8 6C6F6E67 		.ascii	"long long int\000"
+ 1237      206C6F6E 
+ 1237      6720696E 
+ 1237      7400
+ 1238              	.LASF2:
+ 1239 01b6 73686F72 		.ascii	"short int\000"
+ 1239      7420696E 
+ 1239      7400
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccnCVkKk.s 			page 24
+
+
+ 1240              	.LASF4:
+ 1241 01c0 6C6F6E67 		.ascii	"long int\000"
+ 1241      20696E74 
+ 1241      00
+ 1242              	.LASF0:
+ 1243 01c9 7369676E 		.ascii	"signed char\000"
+ 1243      65642063 
+ 1243      68617200 
+ 1244              	.LASF18:
+ 1245 01d5 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1245      72617465 
+ 1245      645F536F 
+ 1245      75726365 
+ 1245      5C50536F 
+ 1246              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

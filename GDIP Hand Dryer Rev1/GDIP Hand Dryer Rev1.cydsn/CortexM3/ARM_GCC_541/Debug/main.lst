@@ -1,0 +1,1272 @@
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Estop_ISR_Handler,"ax",%progbits
+  20              		.align	2
+  21              		.global	Estop_ISR_Handler
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Estop_ISR_Handler, %function
+  25              	Estop_ISR_Handler:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include <FS.h>
+  14:main.c        **** #include <PCA9685_Custom.h>
+  15:main.c        **** 
+  16:main.c        **** ///////////////////Interrupt Handlers////////////////////
+  17:main.c        ****     CY_ISR( Estop_ISR_Handler ) {
+  28              		.loc 1 17 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  18:main.c        ****         //estop routine here
+  19:main.c        ****         Servo_En_1_Write(1);
+  36              		.loc 1 19 0
+  37 0002 0120     		movs	r0, #1
+  38 0004 FFF7FEFF 		bl	Servo_En_1_Write
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 2
+
+
+  39              	.LVL0:
+  20:main.c        ****         Estop_ClearInterrupt();
+  40              		.loc 1 20 0
+  41 0008 FFF7FEFF 		bl	Estop_ClearInterrupt
+  42              	.LVL1:
+  43 000c 08BD     		pop	{r3, pc}
+  44              		.cfi_endproc
+  45              	.LFE64:
+  46              		.size	Estop_ISR_Handler, .-Estop_ISR_Handler
+  47 000e 00BF     		.section	.text.Detect_5V_Handler,"ax",%progbits
+  48              		.align	2
+  49              		.global	Detect_5V_Handler
+  50              		.thumb
+  51              		.thumb_func
+  52              		.type	Detect_5V_Handler, %function
+  53              	Detect_5V_Handler:
+  54              	.LFB65:
+  21:main.c        ****     }
+  22:main.c        ****     
+  23:main.c        ****     CY_ISR( Detect_5V_Handler ){
+  55              		.loc 1 23 0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 08B5     		push	{r3, lr}
+  60              		.cfi_def_cfa_offset 8
+  61              		.cfi_offset 3, -8
+  62              		.cfi_offset 14, -4
+  24:main.c        ****         //Detect 5V Routine here
+  25:main.c        ****         Servo_En_1_Write(0);
+  63              		.loc 1 25 0
+  64 0002 0020     		movs	r0, #0
+  65 0004 FFF7FEFF 		bl	Servo_En_1_Write
+  66              	.LVL2:
+  26:main.c        ****         Detect_5V_ClearInterrupt();   
+  67              		.loc 1 26 0
+  68 0008 FFF7FEFF 		bl	Detect_5V_ClearInterrupt
+  69              	.LVL3:
+  70 000c 08BD     		pop	{r3, pc}
+  71              		.cfi_endproc
+  72              	.LFE65:
+  73              		.size	Detect_5V_Handler, .-Detect_5V_Handler
+  74 000e 00BF     		.section	.text.UPS_LBO_Handler,"ax",%progbits
+  75              		.align	2
+  76              		.global	UPS_LBO_Handler
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	UPS_LBO_Handler, %function
+  80              	UPS_LBO_Handler:
+  81              	.LFB66:
+  27:main.c        ****     }
+  28:main.c        ****     
+  29:main.c        ****     CY_ISR( UPS_LBO_Handler ){
+  82              		.loc 1 29 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 3
+
+
+  86 0000 08B5     		push	{r3, lr}
+  87              		.cfi_def_cfa_offset 8
+  88              		.cfi_offset 3, -8
+  89              		.cfi_offset 14, -4
+  30:main.c        ****         //UPS LBO Routine here
+  31:main.c        ****         UPS_LBO_ClearInterrupt();
+  90              		.loc 1 31 0
+  91 0002 FFF7FEFF 		bl	UPS_LBO_ClearInterrupt
+  92              	.LVL4:
+  93 0006 08BD     		pop	{r3, pc}
+  94              		.cfi_endproc
+  95              	.LFE66:
+  96              		.size	UPS_LBO_Handler, .-UPS_LBO_Handler
+  97              		.section	.text.main,"ax",%progbits
+  98              		.align	2
+  99              		.global	main
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	main, %function
+ 103              	main:
+ 104              	.LFB67:
+  32:main.c        ****     }
+  33:main.c        **** 
+  34:main.c        **** int main(void)
+  35:main.c        **** {
+ 105              		.loc 1 35 0
+ 106              		.cfi_startproc
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109 0000 10B5     		push	{r4, lr}
+ 110              		.cfi_def_cfa_offset 8
+ 111              		.cfi_offset 4, -8
+ 112              		.cfi_offset 14, -4
+  36:main.c        ****     ////////////////////Start Interrputs//////////////////////
+  37:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 113              		.loc 1 37 0
+ 114              		.syntax unified
+ 115              	@ 37 "main.c" 1
+ 116 0002 62B6     		CPSIE   i
+ 117              	@ 0 "" 2
+  38:main.c        ****     Estop_int_StartEx( Estop_ISR_Handler );
+ 118              		.loc 1 38 0
+ 119              		.thumb
+ 120              		.syntax unified
+ 121 0004 1948     		ldr	r0, .L14
+ 122 0006 FFF7FEFF 		bl	Estop_int_StartEx
+ 123              	.LVL5:
+  39:main.c        ****     Detect_5V_int_StartEx( Detect_5V_Handler );
+ 124              		.loc 1 39 0
+ 125 000a 1948     		ldr	r0, .L14+4
+ 126 000c FFF7FEFF 		bl	Detect_5V_int_StartEx
+ 127              	.LVL6:
+  40:main.c        ****     UPS_LBO_int_StartEx( UPS_LBO_Handler);
+ 128              		.loc 1 40 0
+ 129 0010 1848     		ldr	r0, .L14+8
+ 130 0012 FFF7FEFF 		bl	UPS_LBO_int_StartEx
+ 131              	.LVL7:
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 4
+
+
+  41:main.c        ****         
+  42:main.c        ****     PCA9685_Custom_Begin();
+ 132              		.loc 1 42 0
+ 133 0016 FFF7FEFF 		bl	PCA9685_Custom_Begin
+ 134              	.LVL8:
+ 135              	.L12:
+ 136              	.LBB2:
+ 137              	.LBB3:
+  43:main.c        **** 
+  44:main.c        ****  
+  45:main.c        **** 
+  46:main.c        ****     for(;;)
+  47:main.c        ****     {
+  48:main.c        ****         /* Place your application code here. */
+  49:main.c        ****         uint16_t lowLimit = 0;
+  50:main.c        ****         uint16_t highLimit = 600;
+  51:main.c        ****         
+  52:main.c        ****         for(uint16_t i =lowLimit ; i<highLimit;i++){
+ 138              		.loc 1 52 0
+ 139 001a 0024     		movs	r4, #0
+ 140 001c 0EE0     		b	.L8
+ 141              	.LVL9:
+ 142              	.L9:
+  53:main.c        ****         PCA9685_Custom_setPWM(1,0,i);
+ 143              		.loc 1 53 0 discriminator 3
+ 144 001e 2246     		mov	r2, r4
+ 145 0020 0021     		movs	r1, #0
+ 146 0022 0120     		movs	r0, #1
+ 147 0024 FFF7FEFF 		bl	PCA9685_Custom_setPWM
+ 148              	.LVL10:
+  54:main.c        ****         PCA9685_Custom_setPWM(5,0,i);
+ 149              		.loc 1 54 0 discriminator 3
+ 150 0028 2246     		mov	r2, r4
+ 151 002a 0021     		movs	r1, #0
+ 152 002c 0520     		movs	r0, #5
+ 153 002e FFF7FEFF 		bl	PCA9685_Custom_setPWM
+ 154              	.LVL11:
+  55:main.c        ****         CyDelay(10);
+ 155              		.loc 1 55 0 discriminator 3
+ 156 0032 0A20     		movs	r0, #10
+ 157 0034 FFF7FEFF 		bl	CyDelay
+ 158              	.LVL12:
+  52:main.c        ****         PCA9685_Custom_setPWM(1,0,i);
+ 159              		.loc 1 52 0 discriminator 3
+ 160 0038 0134     		adds	r4, r4, #1
+ 161              	.LVL13:
+ 162 003a A4B2     		uxth	r4, r4
+ 163              	.LVL14:
+ 164              	.L8:
+  52:main.c        ****         PCA9685_Custom_setPWM(1,0,i);
+ 165              		.loc 1 52 0 is_stmt 0 discriminator 1
+ 166 003c B4F5167F 		cmp	r4, #600
+ 167 0040 EDD3     		bcc	.L9
+ 168 0042 4FF41674 		mov	r4, #600
+ 169              	.LVL15:
+ 170 0046 0EE0     		b	.L10
+ 171              	.LVL16:
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 5
+
+
+ 172              	.L11:
+ 173              	.LBE3:
+ 174              	.LBB4:
+  56:main.c        ****         }
+  57:main.c        ****         for(uint16_t i =highLimit ; i>lowLimit;i--){
+  58:main.c        ****         PCA9685_Custom_setPWM(1,0,i);
+ 175              		.loc 1 58 0 is_stmt 1 discriminator 3
+ 176 0048 2246     		mov	r2, r4
+ 177 004a 0021     		movs	r1, #0
+ 178 004c 0120     		movs	r0, #1
+ 179 004e FFF7FEFF 		bl	PCA9685_Custom_setPWM
+ 180              	.LVL17:
+  59:main.c        ****         PCA9685_Custom_setPWM(5,0,i);
+ 181              		.loc 1 59 0 discriminator 3
+ 182 0052 2246     		mov	r2, r4
+ 183 0054 0021     		movs	r1, #0
+ 184 0056 0520     		movs	r0, #5
+ 185 0058 FFF7FEFF 		bl	PCA9685_Custom_setPWM
+ 186              	.LVL18:
+  60:main.c        ****         CyDelay(10);
+ 187              		.loc 1 60 0 discriminator 3
+ 188 005c 0A20     		movs	r0, #10
+ 189 005e FFF7FEFF 		bl	CyDelay
+ 190              	.LVL19:
+  57:main.c        ****         PCA9685_Custom_setPWM(1,0,i);
+ 191              		.loc 1 57 0 discriminator 3
+ 192 0062 013C     		subs	r4, r4, #1
+ 193              	.LVL20:
+ 194 0064 A4B2     		uxth	r4, r4
+ 195              	.LVL21:
+ 196              	.L10:
+  57:main.c        ****         PCA9685_Custom_setPWM(1,0,i);
+ 197              		.loc 1 57 0 is_stmt 0 discriminator 1
+ 198 0066 002C     		cmp	r4, #0
+ 199 0068 EED1     		bne	.L11
+ 200 006a D6E7     		b	.L12
+ 201              	.L15:
+ 202              		.align	2
+ 203              	.L14:
+ 204 006c 00000000 		.word	Estop_ISR_Handler
+ 205 0070 00000000 		.word	Detect_5V_Handler
+ 206 0074 00000000 		.word	UPS_LBO_Handler
+ 207              	.LBE4:
+ 208              	.LBE2:
+ 209              		.cfi_endproc
+ 210              	.LFE67:
+ 211              		.size	main, .-main
+ 212              		.text
+ 213              	.Letext0:
+ 214              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 215              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 216              		.file 4 "Generated_Source\\PSoC5/Servo_En_1.h"
+ 217              		.file 5 "Generated_Source\\PSoC5/Estop.h"
+ 218              		.file 6 "Generated_Source\\PSoC5/Detect_5V.h"
+ 219              		.file 7 "Generated_Source\\PSoC5/UPS_LBO.h"
+ 220              		.file 8 "./PCA9685_Custom.h"
+ 221              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 6
+
+
+ 222              		.file 10 "Generated_Source\\PSoC5/Estop_int.h"
+ 223              		.file 11 "Generated_Source\\PSoC5/Detect_5V_int.h"
+ 224              		.file 12 "Generated_Source\\PSoC5/UPS_LBO_int.h"
+ 225              		.file 13 "Generated_Source\\PSoC5/core_cm3.h"
+ 226              		.section	.debug_info,"",%progbits
+ 227              	.Ldebug_info0:
+ 228 0000 10030000 		.4byte	0x310
+ 229 0004 0400     		.2byte	0x4
+ 230 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 231 000a 04       		.byte	0x4
+ 232 000b 01       		.uleb128 0x1
+ 233 000c 82000000 		.4byte	.LASF33
+ 234 0010 0C       		.byte	0xc
+ 235 0011 83020000 		.4byte	.LASF34
+ 236 0015 7A010000 		.4byte	.LASF35
+ 237 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 238 001d 00000000 		.4byte	0
+ 239 0021 00000000 		.4byte	.Ldebug_line0
+ 240 0025 02       		.uleb128 0x2
+ 241 0026 01       		.byte	0x1
+ 242 0027 06       		.byte	0x6
+ 243 0028 C7020000 		.4byte	.LASF0
+ 244 002c 02       		.uleb128 0x2
+ 245 002d 01       		.byte	0x1
+ 246 002e 08       		.byte	0x8
+ 247 002f 74000000 		.4byte	.LASF1
+ 248 0033 02       		.uleb128 0x2
+ 249 0034 02       		.byte	0x2
+ 250 0035 05       		.byte	0x5
+ 251 0036 8F020000 		.4byte	.LASF2
+ 252 003a 03       		.uleb128 0x3
+ 253 003b D1010000 		.4byte	.LASF4
+ 254 003f 02       		.byte	0x2
+ 255 0040 2B       		.byte	0x2b
+ 256 0041 45000000 		.4byte	0x45
+ 257 0045 02       		.uleb128 0x2
+ 258 0046 02       		.byte	0x2
+ 259 0047 07       		.byte	0x7
+ 260 0048 45010000 		.4byte	.LASF3
+ 261 004c 03       		.uleb128 0x3
+ 262 004d 20000000 		.4byte	.LASF5
+ 263 0051 02       		.byte	0x2
+ 264 0052 3F       		.byte	0x3f
+ 265 0053 57000000 		.4byte	0x57
+ 266 0057 02       		.uleb128 0x2
+ 267 0058 04       		.byte	0x4
+ 268 0059 05       		.byte	0x5
+ 269 005a B2020000 		.4byte	.LASF6
+ 270 005e 02       		.uleb128 0x2
+ 271 005f 04       		.byte	0x4
+ 272 0060 07       		.byte	0x7
+ 273 0061 33010000 		.4byte	.LASF7
+ 274 0065 02       		.uleb128 0x2
+ 275 0066 08       		.byte	0x8
+ 276 0067 05       		.byte	0x5
+ 277 0068 75020000 		.4byte	.LASF8
+ 278 006c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 7
+
+
+ 279 006d 08       		.byte	0x8
+ 280 006e 07       		.byte	0x7
+ 281 006f 25020000 		.4byte	.LASF9
+ 282 0073 04       		.uleb128 0x4
+ 283 0074 04       		.byte	0x4
+ 284 0075 05       		.byte	0x5
+ 285 0076 696E7400 		.ascii	"int\000"
+ 286 007a 02       		.uleb128 0x2
+ 287 007b 04       		.byte	0x4
+ 288 007c 07       		.byte	0x7
+ 289 007d 18020000 		.4byte	.LASF10
+ 290 0081 03       		.uleb128 0x3
+ 291 0082 A9020000 		.4byte	.LASF11
+ 292 0086 03       		.byte	0x3
+ 293 0087 24       		.byte	0x24
+ 294 0088 3A000000 		.4byte	0x3a
+ 295 008c 03       		.uleb128 0x3
+ 296 008d 64020000 		.4byte	.LASF12
+ 297 0091 03       		.byte	0x3
+ 298 0092 2C       		.byte	0x2c
+ 299 0093 4C000000 		.4byte	0x4c
+ 300 0097 02       		.uleb128 0x2
+ 301 0098 04       		.byte	0x4
+ 302 0099 04       		.byte	0x4
+ 303 009a 6E000000 		.4byte	.LASF13
+ 304 009e 02       		.uleb128 0x2
+ 305 009f 08       		.byte	0x8
+ 306 00a0 04       		.byte	0x4
+ 307 00a1 DC010000 		.4byte	.LASF14
+ 308 00a5 02       		.uleb128 0x2
+ 309 00a6 01       		.byte	0x1
+ 310 00a7 08       		.byte	0x8
+ 311 00a8 8A020000 		.4byte	.LASF15
+ 312 00ac 02       		.uleb128 0x2
+ 313 00ad 08       		.byte	0x8
+ 314 00ae 04       		.byte	0x4
+ 315 00af BB020000 		.4byte	.LASF16
+ 316 00b3 02       		.uleb128 0x2
+ 317 00b4 04       		.byte	0x4
+ 318 00b5 07       		.byte	0x7
+ 319 00b6 6C020000 		.4byte	.LASF17
+ 320 00ba 05       		.uleb128 0x5
+ 321 00bb 21010000 		.4byte	.LASF18
+ 322 00bf 01       		.byte	0x1
+ 323 00c0 11       		.byte	0x11
+ 324 00c1 00000000 		.4byte	.LFB64
+ 325 00c5 0E000000 		.4byte	.LFE64-.LFB64
+ 326 00c9 01       		.uleb128 0x1
+ 327 00ca 9C       		.byte	0x9c
+ 328 00cb EC000000 		.4byte	0xec
+ 329 00cf 06       		.uleb128 0x6
+ 330 00d0 08000000 		.4byte	.LVL0
+ 331 00d4 A5020000 		.4byte	0x2a5
+ 332 00d8 E2000000 		.4byte	0xe2
+ 333 00dc 07       		.uleb128 0x7
+ 334 00dd 01       		.uleb128 0x1
+ 335 00de 50       		.byte	0x50
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 8
+
+
+ 336 00df 01       		.uleb128 0x1
+ 337 00e0 31       		.byte	0x31
+ 338 00e1 00       		.byte	0
+ 339 00e2 08       		.uleb128 0x8
+ 340 00e3 0C000000 		.4byte	.LVL1
+ 341 00e7 B0020000 		.4byte	0x2b0
+ 342 00eb 00       		.byte	0
+ 343 00ec 05       		.uleb128 0x5
+ 344 00ed 01020000 		.4byte	.LASF19
+ 345 00f1 01       		.byte	0x1
+ 346 00f2 17       		.byte	0x17
+ 347 00f3 00000000 		.4byte	.LFB65
+ 348 00f7 0E000000 		.4byte	.LFE65-.LFB65
+ 349 00fb 01       		.uleb128 0x1
+ 350 00fc 9C       		.byte	0x9c
+ 351 00fd 1E010000 		.4byte	0x11e
+ 352 0101 06       		.uleb128 0x6
+ 353 0102 08000000 		.4byte	.LVL2
+ 354 0106 A5020000 		.4byte	0x2a5
+ 355 010a 14010000 		.4byte	0x114
+ 356 010e 07       		.uleb128 0x7
+ 357 010f 01       		.uleb128 0x1
+ 358 0110 50       		.byte	0x50
+ 359 0111 01       		.uleb128 0x1
+ 360 0112 30       		.byte	0x30
+ 361 0113 00       		.byte	0
+ 362 0114 08       		.uleb128 0x8
+ 363 0115 0C000000 		.4byte	.LVL3
+ 364 0119 BB020000 		.4byte	0x2bb
+ 365 011d 00       		.byte	0
+ 366 011e 05       		.uleb128 0x5
+ 367 011f 99020000 		.4byte	.LASF20
+ 368 0123 01       		.byte	0x1
+ 369 0124 1D       		.byte	0x1d
+ 370 0125 00000000 		.4byte	.LFB66
+ 371 0129 08000000 		.4byte	.LFE66-.LFB66
+ 372 012d 01       		.uleb128 0x1
+ 373 012e 9C       		.byte	0x9c
+ 374 012f 3D010000 		.4byte	0x13d
+ 375 0133 08       		.uleb128 0x8
+ 376 0134 06000000 		.4byte	.LVL4
+ 377 0138 C6020000 		.4byte	0x2c6
+ 378 013c 00       		.byte	0
+ 379 013d 09       		.uleb128 0x9
+ 380 013e 13020000 		.4byte	.LASF36
+ 381 0142 01       		.byte	0x1
+ 382 0143 22       		.byte	0x22
+ 383 0144 73000000 		.4byte	0x73
+ 384 0148 00000000 		.4byte	.LFB67
+ 385 014c 78000000 		.4byte	.LFE67-.LFB67
+ 386 0150 01       		.uleb128 0x1
+ 387 0151 9C       		.byte	0x9c
+ 388 0152 94020000 		.4byte	0x294
+ 389 0156 0A       		.uleb128 0xa
+ 390 0157 1A000000 		.4byte	.LBB2
+ 391 015b 5E000000 		.4byte	.LBE2-.LBB2
+ 392 015f 45020000 		.4byte	0x245
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 9
+
+
+ 393 0163 0B       		.uleb128 0xb
+ 394 0164 F8010000 		.4byte	.LASF21
+ 395 0168 01       		.byte	0x1
+ 396 0169 31       		.byte	0x31
+ 397 016a 81000000 		.4byte	0x81
+ 398 016e 00       		.byte	0
+ 399 016f 0C       		.uleb128 0xc
+ 400 0170 16000000 		.4byte	.LASF22
+ 401 0174 01       		.byte	0x1
+ 402 0175 32       		.byte	0x32
+ 403 0176 81000000 		.4byte	0x81
+ 404 017a 5802     		.2byte	0x258
+ 405 017c 0A       		.uleb128 0xa
+ 406 017d 1A000000 		.4byte	.LBB3
+ 407 0181 2E000000 		.4byte	.LBE3-.LBB3
+ 408 0185 E2010000 		.4byte	0x1e2
+ 409 0189 0D       		.uleb128 0xd
+ 410 018a 6900     		.ascii	"i\000"
+ 411 018c 01       		.byte	0x1
+ 412 018d 34       		.byte	0x34
+ 413 018e 81000000 		.4byte	0x81
+ 414 0192 00000000 		.4byte	.LLST0
+ 415 0196 06       		.uleb128 0x6
+ 416 0197 28000000 		.4byte	.LVL10
+ 417 019b D1020000 		.4byte	0x2d1
+ 418 019f B4010000 		.4byte	0x1b4
+ 419 01a3 07       		.uleb128 0x7
+ 420 01a4 01       		.uleb128 0x1
+ 421 01a5 50       		.byte	0x50
+ 422 01a6 01       		.uleb128 0x1
+ 423 01a7 31       		.byte	0x31
+ 424 01a8 07       		.uleb128 0x7
+ 425 01a9 01       		.uleb128 0x1
+ 426 01aa 51       		.byte	0x51
+ 427 01ab 01       		.uleb128 0x1
+ 428 01ac 30       		.byte	0x30
+ 429 01ad 07       		.uleb128 0x7
+ 430 01ae 01       		.uleb128 0x1
+ 431 01af 52       		.byte	0x52
+ 432 01b0 02       		.uleb128 0x2
+ 433 01b1 74       		.byte	0x74
+ 434 01b2 00       		.sleb128 0
+ 435 01b3 00       		.byte	0
+ 436 01b4 06       		.uleb128 0x6
+ 437 01b5 32000000 		.4byte	.LVL11
+ 438 01b9 D1020000 		.4byte	0x2d1
+ 439 01bd D2010000 		.4byte	0x1d2
+ 440 01c1 07       		.uleb128 0x7
+ 441 01c2 01       		.uleb128 0x1
+ 442 01c3 50       		.byte	0x50
+ 443 01c4 01       		.uleb128 0x1
+ 444 01c5 35       		.byte	0x35
+ 445 01c6 07       		.uleb128 0x7
+ 446 01c7 01       		.uleb128 0x1
+ 447 01c8 51       		.byte	0x51
+ 448 01c9 01       		.uleb128 0x1
+ 449 01ca 30       		.byte	0x30
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 10
+
+
+ 450 01cb 07       		.uleb128 0x7
+ 451 01cc 01       		.uleb128 0x1
+ 452 01cd 52       		.byte	0x52
+ 453 01ce 02       		.uleb128 0x2
+ 454 01cf 74       		.byte	0x74
+ 455 01d0 00       		.sleb128 0
+ 456 01d1 00       		.byte	0
+ 457 01d2 0E       		.uleb128 0xe
+ 458 01d3 38000000 		.4byte	.LVL12
+ 459 01d7 DC020000 		.4byte	0x2dc
+ 460 01db 07       		.uleb128 0x7
+ 461 01dc 01       		.uleb128 0x1
+ 462 01dd 50       		.byte	0x50
+ 463 01de 01       		.uleb128 0x1
+ 464 01df 3A       		.byte	0x3a
+ 465 01e0 00       		.byte	0
+ 466 01e1 00       		.byte	0
+ 467 01e2 0F       		.uleb128 0xf
+ 468 01e3 48000000 		.4byte	.LBB4
+ 469 01e7 30000000 		.4byte	.LBE4-.LBB4
+ 470 01eb 0D       		.uleb128 0xd
+ 471 01ec 6900     		.ascii	"i\000"
+ 472 01ee 01       		.byte	0x1
+ 473 01ef 39       		.byte	0x39
+ 474 01f0 81000000 		.4byte	0x81
+ 475 01f4 2A000000 		.4byte	.LLST1
+ 476 01f8 06       		.uleb128 0x6
+ 477 01f9 52000000 		.4byte	.LVL17
+ 478 01fd D1020000 		.4byte	0x2d1
+ 479 0201 16020000 		.4byte	0x216
+ 480 0205 07       		.uleb128 0x7
+ 481 0206 01       		.uleb128 0x1
+ 482 0207 50       		.byte	0x50
+ 483 0208 01       		.uleb128 0x1
+ 484 0209 31       		.byte	0x31
+ 485 020a 07       		.uleb128 0x7
+ 486 020b 01       		.uleb128 0x1
+ 487 020c 51       		.byte	0x51
+ 488 020d 01       		.uleb128 0x1
+ 489 020e 30       		.byte	0x30
+ 490 020f 07       		.uleb128 0x7
+ 491 0210 01       		.uleb128 0x1
+ 492 0211 52       		.byte	0x52
+ 493 0212 02       		.uleb128 0x2
+ 494 0213 74       		.byte	0x74
+ 495 0214 00       		.sleb128 0
+ 496 0215 00       		.byte	0
+ 497 0216 06       		.uleb128 0x6
+ 498 0217 5C000000 		.4byte	.LVL18
+ 499 021b D1020000 		.4byte	0x2d1
+ 500 021f 34020000 		.4byte	0x234
+ 501 0223 07       		.uleb128 0x7
+ 502 0224 01       		.uleb128 0x1
+ 503 0225 50       		.byte	0x50
+ 504 0226 01       		.uleb128 0x1
+ 505 0227 35       		.byte	0x35
+ 506 0228 07       		.uleb128 0x7
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 11
+
+
+ 507 0229 01       		.uleb128 0x1
+ 508 022a 51       		.byte	0x51
+ 509 022b 01       		.uleb128 0x1
+ 510 022c 30       		.byte	0x30
+ 511 022d 07       		.uleb128 0x7
+ 512 022e 01       		.uleb128 0x1
+ 513 022f 52       		.byte	0x52
+ 514 0230 02       		.uleb128 0x2
+ 515 0231 74       		.byte	0x74
+ 516 0232 00       		.sleb128 0
+ 517 0233 00       		.byte	0
+ 518 0234 0E       		.uleb128 0xe
+ 519 0235 62000000 		.4byte	.LVL19
+ 520 0239 DC020000 		.4byte	0x2dc
+ 521 023d 07       		.uleb128 0x7
+ 522 023e 01       		.uleb128 0x1
+ 523 023f 50       		.byte	0x50
+ 524 0240 01       		.uleb128 0x1
+ 525 0241 3A       		.byte	0x3a
+ 526 0242 00       		.byte	0
+ 527 0243 00       		.byte	0
+ 528 0244 00       		.byte	0
+ 529 0245 06       		.uleb128 0x6
+ 530 0246 0A000000 		.4byte	.LVL5
+ 531 024a E7020000 		.4byte	0x2e7
+ 532 024e 5C020000 		.4byte	0x25c
+ 533 0252 07       		.uleb128 0x7
+ 534 0253 01       		.uleb128 0x1
+ 535 0254 50       		.byte	0x50
+ 536 0255 05       		.uleb128 0x5
+ 537 0256 03       		.byte	0x3
+ 538 0257 00000000 		.4byte	Estop_ISR_Handler
+ 539 025b 00       		.byte	0
+ 540 025c 06       		.uleb128 0x6
+ 541 025d 10000000 		.4byte	.LVL6
+ 542 0261 F2020000 		.4byte	0x2f2
+ 543 0265 73020000 		.4byte	0x273
+ 544 0269 07       		.uleb128 0x7
+ 545 026a 01       		.uleb128 0x1
+ 546 026b 50       		.byte	0x50
+ 547 026c 05       		.uleb128 0x5
+ 548 026d 03       		.byte	0x3
+ 549 026e 00000000 		.4byte	Detect_5V_Handler
+ 550 0272 00       		.byte	0
+ 551 0273 06       		.uleb128 0x6
+ 552 0274 16000000 		.4byte	.LVL7
+ 553 0278 FD020000 		.4byte	0x2fd
+ 554 027c 8A020000 		.4byte	0x28a
+ 555 0280 07       		.uleb128 0x7
+ 556 0281 01       		.uleb128 0x1
+ 557 0282 50       		.byte	0x50
+ 558 0283 05       		.uleb128 0x5
+ 559 0284 03       		.byte	0x3
+ 560 0285 00000000 		.4byte	UPS_LBO_Handler
+ 561 0289 00       		.byte	0
+ 562 028a 08       		.uleb128 0x8
+ 563 028b 1A000000 		.4byte	.LVL8
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 12
+
+
+ 564 028f 08030000 		.4byte	0x308
+ 565 0293 00       		.byte	0
+ 566 0294 10       		.uleb128 0x10
+ 567 0295 6D010000 		.4byte	.LASF37
+ 568 0299 0D       		.byte	0xd
+ 569 029a 1207     		.2byte	0x712
+ 570 029c A0020000 		.4byte	0x2a0
+ 571 02a0 11       		.uleb128 0x11
+ 572 02a1 8C000000 		.4byte	0x8c
+ 573 02a5 12       		.uleb128 0x12
+ 574 02a6 10010000 		.4byte	.LASF23
+ 575 02aa 10010000 		.4byte	.LASF23
+ 576 02ae 04       		.byte	0x4
+ 577 02af 26       		.byte	0x26
+ 578 02b0 12       		.uleb128 0x12
+ 579 02b1 58010000 		.4byte	.LASF24
+ 580 02b5 58010000 		.4byte	.LASF24
+ 581 02b9 05       		.byte	0x5
+ 582 02ba 2B       		.byte	0x2b
+ 583 02bb 12       		.uleb128 0x12
+ 584 02bc 55000000 		.4byte	.LASF25
+ 585 02c0 55000000 		.4byte	.LASF25
+ 586 02c4 06       		.byte	0x6
+ 587 02c5 2B       		.byte	0x2b
+ 588 02c6 12       		.uleb128 0x12
+ 589 02c7 3E000000 		.4byte	.LASF26
+ 590 02cb 3E000000 		.4byte	.LASF26
+ 591 02cf 07       		.byte	0x7
+ 592 02d0 2B       		.byte	0x2b
+ 593 02d1 12       		.uleb128 0x12
+ 594 02d2 4E020000 		.4byte	.LASF27
+ 595 02d6 4E020000 		.4byte	.LASF27
+ 596 02da 08       		.byte	0x8
+ 597 02db 30       		.byte	0x30
+ 598 02dc 12       		.uleb128 0x12
+ 599 02dd D3020000 		.4byte	.LASF28
+ 600 02e1 D3020000 		.4byte	.LASF28
+ 601 02e5 09       		.byte	0x9
+ 602 02e6 76       		.byte	0x76
+ 603 02e7 12       		.uleb128 0x12
+ 604 02e8 3C020000 		.4byte	.LASF29
+ 605 02ec 3C020000 		.4byte	.LASF29
+ 606 02f0 0A       		.byte	0xa
+ 607 02f1 18       		.byte	0x18
+ 608 02f2 12       		.uleb128 0x12
+ 609 02f3 00000000 		.4byte	.LASF30
+ 610 02f7 00000000 		.4byte	.LASF30
+ 611 02fb 0B       		.byte	0xb
+ 612 02fc 18       		.byte	0x18
+ 613 02fd 12       		.uleb128 0x12
+ 614 02fe 2A000000 		.4byte	.LASF31
+ 615 0302 2A000000 		.4byte	.LASF31
+ 616 0306 0C       		.byte	0xc
+ 617 0307 18       		.byte	0x18
+ 618 0308 12       		.uleb128 0x12
+ 619 0309 E3010000 		.4byte	.LASF32
+ 620 030d E3010000 		.4byte	.LASF32
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 13
+
+
+ 621 0311 08       		.byte	0x8
+ 622 0312 2D       		.byte	0x2d
+ 623 0313 00       		.byte	0
+ 624              		.section	.debug_abbrev,"",%progbits
+ 625              	.Ldebug_abbrev0:
+ 626 0000 01       		.uleb128 0x1
+ 627 0001 11       		.uleb128 0x11
+ 628 0002 01       		.byte	0x1
+ 629 0003 25       		.uleb128 0x25
+ 630 0004 0E       		.uleb128 0xe
+ 631 0005 13       		.uleb128 0x13
+ 632 0006 0B       		.uleb128 0xb
+ 633 0007 03       		.uleb128 0x3
+ 634 0008 0E       		.uleb128 0xe
+ 635 0009 1B       		.uleb128 0x1b
+ 636 000a 0E       		.uleb128 0xe
+ 637 000b 55       		.uleb128 0x55
+ 638 000c 17       		.uleb128 0x17
+ 639 000d 11       		.uleb128 0x11
+ 640 000e 01       		.uleb128 0x1
+ 641 000f 10       		.uleb128 0x10
+ 642 0010 17       		.uleb128 0x17
+ 643 0011 00       		.byte	0
+ 644 0012 00       		.byte	0
+ 645 0013 02       		.uleb128 0x2
+ 646 0014 24       		.uleb128 0x24
+ 647 0015 00       		.byte	0
+ 648 0016 0B       		.uleb128 0xb
+ 649 0017 0B       		.uleb128 0xb
+ 650 0018 3E       		.uleb128 0x3e
+ 651 0019 0B       		.uleb128 0xb
+ 652 001a 03       		.uleb128 0x3
+ 653 001b 0E       		.uleb128 0xe
+ 654 001c 00       		.byte	0
+ 655 001d 00       		.byte	0
+ 656 001e 03       		.uleb128 0x3
+ 657 001f 16       		.uleb128 0x16
+ 658 0020 00       		.byte	0
+ 659 0021 03       		.uleb128 0x3
+ 660 0022 0E       		.uleb128 0xe
+ 661 0023 3A       		.uleb128 0x3a
+ 662 0024 0B       		.uleb128 0xb
+ 663 0025 3B       		.uleb128 0x3b
+ 664 0026 0B       		.uleb128 0xb
+ 665 0027 49       		.uleb128 0x49
+ 666 0028 13       		.uleb128 0x13
+ 667 0029 00       		.byte	0
+ 668 002a 00       		.byte	0
+ 669 002b 04       		.uleb128 0x4
+ 670 002c 24       		.uleb128 0x24
+ 671 002d 00       		.byte	0
+ 672 002e 0B       		.uleb128 0xb
+ 673 002f 0B       		.uleb128 0xb
+ 674 0030 3E       		.uleb128 0x3e
+ 675 0031 0B       		.uleb128 0xb
+ 676 0032 03       		.uleb128 0x3
+ 677 0033 08       		.uleb128 0x8
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 14
+
+
+ 678 0034 00       		.byte	0
+ 679 0035 00       		.byte	0
+ 680 0036 05       		.uleb128 0x5
+ 681 0037 2E       		.uleb128 0x2e
+ 682 0038 01       		.byte	0x1
+ 683 0039 3F       		.uleb128 0x3f
+ 684 003a 19       		.uleb128 0x19
+ 685 003b 03       		.uleb128 0x3
+ 686 003c 0E       		.uleb128 0xe
+ 687 003d 3A       		.uleb128 0x3a
+ 688 003e 0B       		.uleb128 0xb
+ 689 003f 3B       		.uleb128 0x3b
+ 690 0040 0B       		.uleb128 0xb
+ 691 0041 27       		.uleb128 0x27
+ 692 0042 19       		.uleb128 0x19
+ 693 0043 11       		.uleb128 0x11
+ 694 0044 01       		.uleb128 0x1
+ 695 0045 12       		.uleb128 0x12
+ 696 0046 06       		.uleb128 0x6
+ 697 0047 40       		.uleb128 0x40
+ 698 0048 18       		.uleb128 0x18
+ 699 0049 9742     		.uleb128 0x2117
+ 700 004b 19       		.uleb128 0x19
+ 701 004c 01       		.uleb128 0x1
+ 702 004d 13       		.uleb128 0x13
+ 703 004e 00       		.byte	0
+ 704 004f 00       		.byte	0
+ 705 0050 06       		.uleb128 0x6
+ 706 0051 898201   		.uleb128 0x4109
+ 707 0054 01       		.byte	0x1
+ 708 0055 11       		.uleb128 0x11
+ 709 0056 01       		.uleb128 0x1
+ 710 0057 31       		.uleb128 0x31
+ 711 0058 13       		.uleb128 0x13
+ 712 0059 01       		.uleb128 0x1
+ 713 005a 13       		.uleb128 0x13
+ 714 005b 00       		.byte	0
+ 715 005c 00       		.byte	0
+ 716 005d 07       		.uleb128 0x7
+ 717 005e 8A8201   		.uleb128 0x410a
+ 718 0061 00       		.byte	0
+ 719 0062 02       		.uleb128 0x2
+ 720 0063 18       		.uleb128 0x18
+ 721 0064 9142     		.uleb128 0x2111
+ 722 0066 18       		.uleb128 0x18
+ 723 0067 00       		.byte	0
+ 724 0068 00       		.byte	0
+ 725 0069 08       		.uleb128 0x8
+ 726 006a 898201   		.uleb128 0x4109
+ 727 006d 00       		.byte	0
+ 728 006e 11       		.uleb128 0x11
+ 729 006f 01       		.uleb128 0x1
+ 730 0070 31       		.uleb128 0x31
+ 731 0071 13       		.uleb128 0x13
+ 732 0072 00       		.byte	0
+ 733 0073 00       		.byte	0
+ 734 0074 09       		.uleb128 0x9
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 15
+
+
+ 735 0075 2E       		.uleb128 0x2e
+ 736 0076 01       		.byte	0x1
+ 737 0077 3F       		.uleb128 0x3f
+ 738 0078 19       		.uleb128 0x19
+ 739 0079 03       		.uleb128 0x3
+ 740 007a 0E       		.uleb128 0xe
+ 741 007b 3A       		.uleb128 0x3a
+ 742 007c 0B       		.uleb128 0xb
+ 743 007d 3B       		.uleb128 0x3b
+ 744 007e 0B       		.uleb128 0xb
+ 745 007f 27       		.uleb128 0x27
+ 746 0080 19       		.uleb128 0x19
+ 747 0081 49       		.uleb128 0x49
+ 748 0082 13       		.uleb128 0x13
+ 749 0083 8701     		.uleb128 0x87
+ 750 0085 19       		.uleb128 0x19
+ 751 0086 11       		.uleb128 0x11
+ 752 0087 01       		.uleb128 0x1
+ 753 0088 12       		.uleb128 0x12
+ 754 0089 06       		.uleb128 0x6
+ 755 008a 40       		.uleb128 0x40
+ 756 008b 18       		.uleb128 0x18
+ 757 008c 9742     		.uleb128 0x2117
+ 758 008e 19       		.uleb128 0x19
+ 759 008f 01       		.uleb128 0x1
+ 760 0090 13       		.uleb128 0x13
+ 761 0091 00       		.byte	0
+ 762 0092 00       		.byte	0
+ 763 0093 0A       		.uleb128 0xa
+ 764 0094 0B       		.uleb128 0xb
+ 765 0095 01       		.byte	0x1
+ 766 0096 11       		.uleb128 0x11
+ 767 0097 01       		.uleb128 0x1
+ 768 0098 12       		.uleb128 0x12
+ 769 0099 06       		.uleb128 0x6
+ 770 009a 01       		.uleb128 0x1
+ 771 009b 13       		.uleb128 0x13
+ 772 009c 00       		.byte	0
+ 773 009d 00       		.byte	0
+ 774 009e 0B       		.uleb128 0xb
+ 775 009f 34       		.uleb128 0x34
+ 776 00a0 00       		.byte	0
+ 777 00a1 03       		.uleb128 0x3
+ 778 00a2 0E       		.uleb128 0xe
+ 779 00a3 3A       		.uleb128 0x3a
+ 780 00a4 0B       		.uleb128 0xb
+ 781 00a5 3B       		.uleb128 0x3b
+ 782 00a6 0B       		.uleb128 0xb
+ 783 00a7 49       		.uleb128 0x49
+ 784 00a8 13       		.uleb128 0x13
+ 785 00a9 1C       		.uleb128 0x1c
+ 786 00aa 0B       		.uleb128 0xb
+ 787 00ab 00       		.byte	0
+ 788 00ac 00       		.byte	0
+ 789 00ad 0C       		.uleb128 0xc
+ 790 00ae 34       		.uleb128 0x34
+ 791 00af 00       		.byte	0
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 16
+
+
+ 792 00b0 03       		.uleb128 0x3
+ 793 00b1 0E       		.uleb128 0xe
+ 794 00b2 3A       		.uleb128 0x3a
+ 795 00b3 0B       		.uleb128 0xb
+ 796 00b4 3B       		.uleb128 0x3b
+ 797 00b5 0B       		.uleb128 0xb
+ 798 00b6 49       		.uleb128 0x49
+ 799 00b7 13       		.uleb128 0x13
+ 800 00b8 1C       		.uleb128 0x1c
+ 801 00b9 05       		.uleb128 0x5
+ 802 00ba 00       		.byte	0
+ 803 00bb 00       		.byte	0
+ 804 00bc 0D       		.uleb128 0xd
+ 805 00bd 34       		.uleb128 0x34
+ 806 00be 00       		.byte	0
+ 807 00bf 03       		.uleb128 0x3
+ 808 00c0 08       		.uleb128 0x8
+ 809 00c1 3A       		.uleb128 0x3a
+ 810 00c2 0B       		.uleb128 0xb
+ 811 00c3 3B       		.uleb128 0x3b
+ 812 00c4 0B       		.uleb128 0xb
+ 813 00c5 49       		.uleb128 0x49
+ 814 00c6 13       		.uleb128 0x13
+ 815 00c7 02       		.uleb128 0x2
+ 816 00c8 17       		.uleb128 0x17
+ 817 00c9 00       		.byte	0
+ 818 00ca 00       		.byte	0
+ 819 00cb 0E       		.uleb128 0xe
+ 820 00cc 898201   		.uleb128 0x4109
+ 821 00cf 01       		.byte	0x1
+ 822 00d0 11       		.uleb128 0x11
+ 823 00d1 01       		.uleb128 0x1
+ 824 00d2 31       		.uleb128 0x31
+ 825 00d3 13       		.uleb128 0x13
+ 826 00d4 00       		.byte	0
+ 827 00d5 00       		.byte	0
+ 828 00d6 0F       		.uleb128 0xf
+ 829 00d7 0B       		.uleb128 0xb
+ 830 00d8 01       		.byte	0x1
+ 831 00d9 11       		.uleb128 0x11
+ 832 00da 01       		.uleb128 0x1
+ 833 00db 12       		.uleb128 0x12
+ 834 00dc 06       		.uleb128 0x6
+ 835 00dd 00       		.byte	0
+ 836 00de 00       		.byte	0
+ 837 00df 10       		.uleb128 0x10
+ 838 00e0 34       		.uleb128 0x34
+ 839 00e1 00       		.byte	0
+ 840 00e2 03       		.uleb128 0x3
+ 841 00e3 0E       		.uleb128 0xe
+ 842 00e4 3A       		.uleb128 0x3a
+ 843 00e5 0B       		.uleb128 0xb
+ 844 00e6 3B       		.uleb128 0x3b
+ 845 00e7 05       		.uleb128 0x5
+ 846 00e8 49       		.uleb128 0x49
+ 847 00e9 13       		.uleb128 0x13
+ 848 00ea 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 17
+
+
+ 849 00eb 19       		.uleb128 0x19
+ 850 00ec 3C       		.uleb128 0x3c
+ 851 00ed 19       		.uleb128 0x19
+ 852 00ee 00       		.byte	0
+ 853 00ef 00       		.byte	0
+ 854 00f0 11       		.uleb128 0x11
+ 855 00f1 35       		.uleb128 0x35
+ 856 00f2 00       		.byte	0
+ 857 00f3 49       		.uleb128 0x49
+ 858 00f4 13       		.uleb128 0x13
+ 859 00f5 00       		.byte	0
+ 860 00f6 00       		.byte	0
+ 861 00f7 12       		.uleb128 0x12
+ 862 00f8 2E       		.uleb128 0x2e
+ 863 00f9 00       		.byte	0
+ 864 00fa 3F       		.uleb128 0x3f
+ 865 00fb 19       		.uleb128 0x19
+ 866 00fc 3C       		.uleb128 0x3c
+ 867 00fd 19       		.uleb128 0x19
+ 868 00fe 6E       		.uleb128 0x6e
+ 869 00ff 0E       		.uleb128 0xe
+ 870 0100 03       		.uleb128 0x3
+ 871 0101 0E       		.uleb128 0xe
+ 872 0102 3A       		.uleb128 0x3a
+ 873 0103 0B       		.uleb128 0xb
+ 874 0104 3B       		.uleb128 0x3b
+ 875 0105 0B       		.uleb128 0xb
+ 876 0106 00       		.byte	0
+ 877 0107 00       		.byte	0
+ 878 0108 00       		.byte	0
+ 879              		.section	.debug_loc,"",%progbits
+ 880              	.Ldebug_loc0:
+ 881              	.LLST0:
+ 882 0000 1A000000 		.4byte	.LVL8
+ 883 0004 1E000000 		.4byte	.LVL9
+ 884 0008 0200     		.2byte	0x2
+ 885 000a 30       		.byte	0x30
+ 886 000b 9F       		.byte	0x9f
+ 887 000c 1E000000 		.4byte	.LVL9
+ 888 0010 3A000000 		.4byte	.LVL13
+ 889 0014 0100     		.2byte	0x1
+ 890 0016 54       		.byte	0x54
+ 891 0017 3C000000 		.4byte	.LVL14
+ 892 001b 46000000 		.4byte	.LVL15
+ 893 001f 0100     		.2byte	0x1
+ 894 0021 54       		.byte	0x54
+ 895 0022 00000000 		.4byte	0
+ 896 0026 00000000 		.4byte	0
+ 897              	.LLST1:
+ 898 002a 48000000 		.4byte	.LVL16
+ 899 002e 64000000 		.4byte	.LVL20
+ 900 0032 0100     		.2byte	0x1
+ 901 0034 54       		.byte	0x54
+ 902 0035 66000000 		.4byte	.LVL21
+ 903 0039 78000000 		.4byte	.LFE67
+ 904 003d 0100     		.2byte	0x1
+ 905 003f 54       		.byte	0x54
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 18
+
+
+ 906 0040 00000000 		.4byte	0
+ 907 0044 00000000 		.4byte	0
+ 908              		.section	.debug_aranges,"",%progbits
+ 909 0000 34000000 		.4byte	0x34
+ 910 0004 0200     		.2byte	0x2
+ 911 0006 00000000 		.4byte	.Ldebug_info0
+ 912 000a 04       		.byte	0x4
+ 913 000b 00       		.byte	0
+ 914 000c 0000     		.2byte	0
+ 915 000e 0000     		.2byte	0
+ 916 0010 00000000 		.4byte	.LFB64
+ 917 0014 0E000000 		.4byte	.LFE64-.LFB64
+ 918 0018 00000000 		.4byte	.LFB65
+ 919 001c 0E000000 		.4byte	.LFE65-.LFB65
+ 920 0020 00000000 		.4byte	.LFB66
+ 921 0024 08000000 		.4byte	.LFE66-.LFB66
+ 922 0028 00000000 		.4byte	.LFB67
+ 923 002c 78000000 		.4byte	.LFE67-.LFB67
+ 924 0030 00000000 		.4byte	0
+ 925 0034 00000000 		.4byte	0
+ 926              		.section	.debug_ranges,"",%progbits
+ 927              	.Ldebug_ranges0:
+ 928 0000 00000000 		.4byte	.LFB64
+ 929 0004 0E000000 		.4byte	.LFE64
+ 930 0008 00000000 		.4byte	.LFB65
+ 931 000c 0E000000 		.4byte	.LFE65
+ 932 0010 00000000 		.4byte	.LFB66
+ 933 0014 08000000 		.4byte	.LFE66
+ 934 0018 00000000 		.4byte	.LFB67
+ 935 001c 78000000 		.4byte	.LFE67
+ 936 0020 00000000 		.4byte	0
+ 937 0024 00000000 		.4byte	0
+ 938              		.section	.debug_line,"",%progbits
+ 939              	.Ldebug_line0:
+ 940 0000 4E020000 		.section	.debug_str,"MS",%progbits,1
+ 940      0200CA01 
+ 940      00000201 
+ 940      FB0E0D00 
+ 940      01010101 
+ 941              	.LASF30:
+ 942 0000 44657465 		.ascii	"Detect_5V_int_StartEx\000"
+ 942      63745F35 
+ 942      565F696E 
+ 942      745F5374 
+ 942      61727445 
+ 943              	.LASF22:
+ 944 0016 68696768 		.ascii	"highLimit\000"
+ 944      4C696D69 
+ 944      7400
+ 945              	.LASF5:
+ 946 0020 5F5F696E 		.ascii	"__int32_t\000"
+ 946      7433325F 
+ 946      7400
+ 947              	.LASF31:
+ 948 002a 5550535F 		.ascii	"UPS_LBO_int_StartEx\000"
+ 948      4C424F5F 
+ 948      696E745F 
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 19
+
+
+ 948      53746172 
+ 948      74457800 
+ 949              	.LASF26:
+ 950 003e 5550535F 		.ascii	"UPS_LBO_ClearInterrupt\000"
+ 950      4C424F5F 
+ 950      436C6561 
+ 950      72496E74 
+ 950      65727275 
+ 951              	.LASF25:
+ 952 0055 44657465 		.ascii	"Detect_5V_ClearInterrupt\000"
+ 952      63745F35 
+ 952      565F436C 
+ 952      65617249 
+ 952      6E746572 
+ 953              	.LASF13:
+ 954 006e 666C6F61 		.ascii	"float\000"
+ 954      7400
+ 955              	.LASF1:
+ 956 0074 756E7369 		.ascii	"unsigned char\000"
+ 956      676E6564 
+ 956      20636861 
+ 956      7200
+ 957              	.LASF33:
+ 958 0082 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 958      43313120 
+ 958      352E342E 
+ 958      31203230 
+ 958      31363036 
+ 959 00b5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 959      20726576 
+ 959      6973696F 
+ 959      6E203233 
+ 959      37373135 
+ 960 00e8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 960      66756E63 
+ 960      74696F6E 
+ 960      2D736563 
+ 960      74696F6E 
+ 961              	.LASF23:
+ 962 0110 53657276 		.ascii	"Servo_En_1_Write\000"
+ 962      6F5F456E 
+ 962      5F315F57 
+ 962      72697465 
+ 962      00
+ 963              	.LASF18:
+ 964 0121 4573746F 		.ascii	"Estop_ISR_Handler\000"
+ 964      705F4953 
+ 964      525F4861 
+ 964      6E646C65 
+ 964      7200
+ 965              	.LASF7:
+ 966 0133 6C6F6E67 		.ascii	"long unsigned int\000"
+ 966      20756E73 
+ 966      69676E65 
+ 966      6420696E 
+ 966      7400
+ 967              	.LASF3:
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 20
+
+
+ 968 0145 73686F72 		.ascii	"short unsigned int\000"
+ 968      7420756E 
+ 968      7369676E 
+ 968      65642069 
+ 968      6E7400
+ 969              	.LASF24:
+ 970 0158 4573746F 		.ascii	"Estop_ClearInterrupt\000"
+ 970      705F436C 
+ 970      65617249 
+ 970      6E746572 
+ 970      72757074 
+ 971              	.LASF37:
+ 972 016d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 972      52784275 
+ 972      66666572 
+ 972      00
+ 973              	.LASF35:
+ 974 017a 433A5C55 		.ascii	"C:\\Users\\Barney\\Documents\\PSoC Creator\\GDIP Ha"
+ 974      73657273 
+ 974      5C426172 
+ 974      6E65795C 
+ 974      446F6375 
+ 975 01a8 6E642044 		.ascii	"nd Dryer Rev1\\GDIP Hand Dryer Rev1.cydsn\000"
+ 975      72796572 
+ 975      20526576 
+ 975      315C4744 
+ 975      49502048 
+ 976              	.LASF4:
+ 977 01d1 5F5F7569 		.ascii	"__uint16_t\000"
+ 977      6E743136 
+ 977      5F7400
+ 978              	.LASF14:
+ 979 01dc 646F7562 		.ascii	"double\000"
+ 979      6C6500
+ 980              	.LASF32:
+ 981 01e3 50434139 		.ascii	"PCA9685_Custom_Begin\000"
+ 981      3638355F 
+ 981      43757374 
+ 981      6F6D5F42 
+ 981      6567696E 
+ 982              	.LASF21:
+ 983 01f8 6C6F774C 		.ascii	"lowLimit\000"
+ 983      696D6974 
+ 983      00
+ 984              	.LASF19:
+ 985 0201 44657465 		.ascii	"Detect_5V_Handler\000"
+ 985      63745F35 
+ 985      565F4861 
+ 985      6E646C65 
+ 985      7200
+ 986              	.LASF36:
+ 987 0213 6D61696E 		.ascii	"main\000"
+ 987      00
+ 988              	.LASF10:
+ 989 0218 756E7369 		.ascii	"unsigned int\000"
+ 989      676E6564 
+ 989      20696E74 
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 21
+
+
+ 989      00
+ 990              	.LASF9:
+ 991 0225 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 991      206C6F6E 
+ 991      6720756E 
+ 991      7369676E 
+ 991      65642069 
+ 992              	.LASF29:
+ 993 023c 4573746F 		.ascii	"Estop_int_StartEx\000"
+ 993      705F696E 
+ 993      745F5374 
+ 993      61727445 
+ 993      7800
+ 994              	.LASF27:
+ 995 024e 50434139 		.ascii	"PCA9685_Custom_setPWM\000"
+ 995      3638355F 
+ 995      43757374 
+ 995      6F6D5F73 
+ 995      65745057 
+ 996              	.LASF12:
+ 997 0264 696E7433 		.ascii	"int32_t\000"
+ 997      325F7400 
+ 998              	.LASF17:
+ 999 026c 73697A65 		.ascii	"sizetype\000"
+ 999      74797065 
+ 999      00
+ 1000              	.LASF8:
+ 1001 0275 6C6F6E67 		.ascii	"long long int\000"
+ 1001      206C6F6E 
+ 1001      6720696E 
+ 1001      7400
+ 1002              	.LASF34:
+ 1003 0283 6D61696E 		.ascii	"main.c\000"
+ 1003      2E6300
+ 1004              	.LASF15:
+ 1005 028a 63686172 		.ascii	"char\000"
+ 1005      00
+ 1006              	.LASF2:
+ 1007 028f 73686F72 		.ascii	"short int\000"
+ 1007      7420696E 
+ 1007      7400
+ 1008              	.LASF20:
+ 1009 0299 5550535F 		.ascii	"UPS_LBO_Handler\000"
+ 1009      4C424F5F 
+ 1009      48616E64 
+ 1009      6C657200 
+ 1010              	.LASF11:
+ 1011 02a9 75696E74 		.ascii	"uint16_t\000"
+ 1011      31365F74 
+ 1011      00
+ 1012              	.LASF6:
+ 1013 02b2 6C6F6E67 		.ascii	"long int\000"
+ 1013      20696E74 
+ 1013      00
+ 1014              	.LASF16:
+ 1015 02bb 6C6F6E67 		.ascii	"long double\000"
+ 1015      20646F75 
+ARM GAS  C:\Users\Barney\AppData\Local\Temp\ccGNe6AD.s 			page 22
+
+
+ 1015      626C6500 
+ 1016              	.LASF0:
+ 1017 02c7 7369676E 		.ascii	"signed char\000"
+ 1017      65642063 
+ 1017      68617200 
+ 1018              	.LASF28:
+ 1019 02d3 43794465 		.ascii	"CyDelay\000"
+ 1019      6C617900 
+ 1020              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
